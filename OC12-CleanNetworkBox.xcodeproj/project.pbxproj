@@ -8,14 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		596613F62A86CE27007FA251 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596613F52A86CE27007FA251 /* AppDelegate.swift */; };
-		596613F82A86CE27007FA251 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596613F72A86CE27007FA251 /* SceneDelegate.swift */; };
 		596613FA2A86CE27007FA251 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596613F92A86CE27007FA251 /* ViewController.swift */; };
-		596613FD2A86CE27007FA251 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 596613FB2A86CE27007FA251 /* Main.storyboard */; };
 		596613FF2A86CE28007FA251 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 596613FE2A86CE28007FA251 /* Assets.xcassets */; };
 		596614022A86CE28007FA251 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 596614002A86CE28007FA251 /* LaunchScreen.storyboard */; };
 		5966140D2A86CE29007FA251 /* OC12_CleanNetworkBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966140C2A86CE29007FA251 /* OC12_CleanNetworkBoxTests.swift */; };
-		596614172A86CE29007FA251 /* OC12_CleanNetworkBoxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596614162A86CE29007FA251 /* OC12_CleanNetworkBoxUITests.swift */; };
-		596614192A86CE29007FA251 /* OC12_CleanNetworkBoxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596614182A86CE29007FA251 /* OC12_CleanNetworkBoxUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,17 +34,13 @@
 /* Begin PBXFileReference section */
 		596613F22A86CE27007FA251 /* OC12-CleanNetworkBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OC12-CleanNetworkBox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		596613F52A86CE27007FA251 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		596613F72A86CE27007FA251 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		596613F92A86CE27007FA251 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		596613FC2A86CE27007FA251 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		596613FE2A86CE28007FA251 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		596614012A86CE28007FA251 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		596614032A86CE28007FA251 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		596614082A86CE29007FA251 /* OC12-CleanNetworkBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OC12-CleanNetworkBoxTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5966140C2A86CE29007FA251 /* OC12_CleanNetworkBoxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OC12_CleanNetworkBoxTests.swift; sourceTree = "<group>"; };
 		596614122A86CE29007FA251 /* OC12-CleanNetworkBoxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OC12-CleanNetworkBoxUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		596614162A86CE29007FA251 /* OC12_CleanNetworkBoxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OC12_CleanNetworkBoxUITests.swift; sourceTree = "<group>"; };
-		596614182A86CE29007FA251 /* OC12_CleanNetworkBoxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OC12_CleanNetworkBoxUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +73,6 @@
 			children = (
 				596613F42A86CE27007FA251 /* OC12-CleanNetworkBox */,
 				5966140B2A86CE29007FA251 /* OC12-CleanNetworkBoxTests */,
-				596614152A86CE29007FA251 /* OC12-CleanNetworkBoxUITests */,
 				596613F32A86CE27007FA251 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,9 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				596613F52A86CE27007FA251 /* AppDelegate.swift */,
-				596613F72A86CE27007FA251 /* SceneDelegate.swift */,
 				596613F92A86CE27007FA251 /* ViewController.swift */,
-				596613FB2A86CE27007FA251 /* Main.storyboard */,
 				596613FE2A86CE28007FA251 /* Assets.xcassets */,
 				596614002A86CE28007FA251 /* LaunchScreen.storyboard */,
 				596614032A86CE28007FA251 /* Info.plist */,
@@ -116,15 +105,6 @@
 				5966140C2A86CE29007FA251 /* OC12_CleanNetworkBoxTests.swift */,
 			);
 			path = "OC12-CleanNetworkBoxTests";
-			sourceTree = "<group>";
-		};
-		596614152A86CE29007FA251 /* OC12-CleanNetworkBoxUITests */ = {
-			isa = PBXGroup;
-			children = (
-				596614162A86CE29007FA251 /* OC12_CleanNetworkBoxUITests.swift */,
-				596614182A86CE29007FA251 /* OC12_CleanNetworkBoxUITestsLaunchTests.swift */,
-			);
-			path = "OC12-CleanNetworkBoxUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +213,6 @@
 			files = (
 				596614022A86CE28007FA251 /* LaunchScreen.storyboard in Resources */,
 				596613FF2A86CE28007FA251 /* Assets.xcassets in Resources */,
-				596613FD2A86CE27007FA251 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +239,6 @@
 			files = (
 				596613FA2A86CE27007FA251 /* ViewController.swift in Sources */,
 				596613F62A86CE27007FA251 /* AppDelegate.swift in Sources */,
-				596613F82A86CE27007FA251 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,8 +254,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				596614192A86CE29007FA251 /* OC12_CleanNetworkBoxUITestsLaunchTests.swift in Sources */,
-				596614172A86CE29007FA251 /* OC12_CleanNetworkBoxUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +273,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		596613FB2A86CE27007FA251 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				596613FC2A86CE27007FA251 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		596614002A86CE28007FA251 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,9 +410,8 @@
 				INFOPLIST_FILE = "OC12-CleanNetworkBox/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,9 +419,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "adpiscinam.OC12-CleanNetworkBox";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -470,9 +440,8 @@
 				INFOPLIST_FILE = "OC12-CleanNetworkBox/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -480,9 +449,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "adpiscinam.OC12-CleanNetworkBox";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
