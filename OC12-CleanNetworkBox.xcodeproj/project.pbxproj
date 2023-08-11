@@ -12,6 +12,12 @@
 		596613FF2A86CE28007FA251 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 596613FE2A86CE28007FA251 /* Assets.xcassets */; };
 		596614022A86CE28007FA251 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 596614002A86CE28007FA251 /* LaunchScreen.storyboard */; };
 		5966140D2A86CE29007FA251 /* OC12_CleanNetworkBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966140C2A86CE29007FA251 /* OC12_CleanNetworkBoxTests.swift */; };
+		5966142E2A86D281007FA251 /* CreateProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596614282A86D281007FA251 /* CreateProfilePresenter.swift */; };
+		5966142F2A86D281007FA251 /* CreateProfileWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596614292A86D281007FA251 /* CreateProfileWorker.swift */; };
+		596614302A86D281007FA251 /* CreateProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966142A2A86D281007FA251 /* CreateProfileRouter.swift */; };
+		596614312A86D281007FA251 /* CreateProfileModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966142B2A86D281007FA251 /* CreateProfileModels.swift */; };
+		596614322A86D281007FA251 /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966142C2A86D281007FA251 /* CreateProfileViewController.swift */; };
+		596614332A86D281007FA251 /* CreateProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966142D2A86D281007FA251 /* CreateProfileInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +47,12 @@
 		596614082A86CE29007FA251 /* OC12-CleanNetworkBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OC12-CleanNetworkBoxTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5966140C2A86CE29007FA251 /* OC12_CleanNetworkBoxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OC12_CleanNetworkBoxTests.swift; sourceTree = "<group>"; };
 		596614122A86CE29007FA251 /* OC12-CleanNetworkBoxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OC12-CleanNetworkBoxUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		596614282A86D281007FA251 /* CreateProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfilePresenter.swift; sourceTree = "<group>"; };
+		596614292A86D281007FA251 /* CreateProfileWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileWorker.swift; sourceTree = "<group>"; };
+		5966142A2A86D281007FA251 /* CreateProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileRouter.swift; sourceTree = "<group>"; };
+		5966142B2A86D281007FA251 /* CreateProfileModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileModels.swift; sourceTree = "<group>"; };
+		5966142C2A86D281007FA251 /* CreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
+		5966142D2A86D281007FA251 /* CreateProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				596613F52A86CE27007FA251 /* AppDelegate.swift */,
+				596614262A86CF6D007FA251 /* Scenes */,
 				596613F92A86CE27007FA251 /* ViewController.swift */,
 				596613FE2A86CE28007FA251 /* Assets.xcassets */,
 				596614002A86CE28007FA251 /* LaunchScreen.storyboard */,
@@ -105,6 +118,27 @@
 				5966140C2A86CE29007FA251 /* OC12_CleanNetworkBoxTests.swift */,
 			);
 			path = "OC12-CleanNetworkBoxTests";
+			sourceTree = "<group>";
+		};
+		596614262A86CF6D007FA251 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				596614272A86CF92007FA251 /* CreateProfile */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		596614272A86CF92007FA251 /* CreateProfile */ = {
+			isa = PBXGroup;
+			children = (
+				596614282A86D281007FA251 /* CreateProfilePresenter.swift */,
+				596614292A86D281007FA251 /* CreateProfileWorker.swift */,
+				5966142A2A86D281007FA251 /* CreateProfileRouter.swift */,
+				5966142B2A86D281007FA251 /* CreateProfileModels.swift */,
+				5966142C2A86D281007FA251 /* CreateProfileViewController.swift */,
+				5966142D2A86D281007FA251 /* CreateProfileInteractor.swift */,
+			);
+			path = CreateProfile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,8 +271,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				596614332A86D281007FA251 /* CreateProfileInteractor.swift in Sources */,
 				596613FA2A86CE27007FA251 /* ViewController.swift in Sources */,
+				596614312A86D281007FA251 /* CreateProfileModels.swift in Sources */,
 				596613F62A86CE27007FA251 /* AppDelegate.swift in Sources */,
+				596614302A86D281007FA251 /* CreateProfileRouter.swift in Sources */,
+				5966142E2A86D281007FA251 /* CreateProfilePresenter.swift in Sources */,
+				5966142F2A86D281007FA251 /* CreateProfileWorker.swift in Sources */,
+				596614322A86D281007FA251 /* CreateProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
