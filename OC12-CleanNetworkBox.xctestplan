@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "D94D5CB4-DF4F-43EB-AE7F-FE782CC201BA",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:OC12-CleanNetworkBox.xcodeproj",
+      "identifier" : "596613F12A86CE27007FA251",
+      "name" : "OC12-CleanNetworkBox"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:OC12-CleanNetworkBox.xcodeproj",
+        "identifier" : "596614072A86CE29007FA251",
+        "name" : "OC12-CleanNetworkBoxTests"
+      }
+    }
+  ],
+  "version" : 1
+}
