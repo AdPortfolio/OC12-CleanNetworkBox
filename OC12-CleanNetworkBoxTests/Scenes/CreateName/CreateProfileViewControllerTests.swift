@@ -16,7 +16,7 @@ final class OC12_CleanNetworkBoxTests: XCTestCase {
         let label = sut.indicationLabel
         
         XCTAssertNotNil(label)
-        XCTAssertEqual(label.text, "Commençons par saisir votre nom")
+        XCTAssertEqual(label.text, "Commençons par saisir votre prénom")
         XCTAssertEqual(label.numberOfLines, 0)
         XCTAssertEqual(label.textAlignment, NSTextAlignment.center)
         XCTAssertFalse(label.translatesAutoresizingMaskIntoConstraints)
@@ -63,8 +63,8 @@ final class OC12_CleanNetworkBoxTests: XCTestCase {
     
     
     
-    private func makeSUT() -> CreateProfileViewController {
-        let sut = CreateProfileViewController()
+    private func makeSUT() -> CreateNameViewController {
+        let sut = CreateNameViewController()
         _ = sut.view
         return sut
     }
