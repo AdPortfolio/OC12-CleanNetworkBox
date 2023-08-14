@@ -58,8 +58,7 @@ func ==(lhs: ProContact, rhs: ProContact) -> Bool {
     && lhs.department == rhs.department
     && lhs.function == rhs.function
     && lhs.id == rhs.id
-    && lhs.date.timeIntervalSince(rhs.date) < 1.0
-    && lhs.total == rhs.total
+    && lhs.birthday.timeIntervalSince(rhs.birthday) < 1.0
 }
 
 // MARK: - Supporting models
