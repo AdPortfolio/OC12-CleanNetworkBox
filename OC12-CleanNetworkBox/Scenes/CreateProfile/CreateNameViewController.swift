@@ -51,9 +51,10 @@ final class CreateNameViewController: UIViewController {
         return field
     }()
     
-    let nextButton: UIButton = {
+    lazy var nextButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("SUIVANT", for: .normal)
+        button.addTarget(self, action: #selector(goToNextScreen), for: .touchUpInside)
         button.backgroundColor = .white
         button.tintColor = .darkGray
         button.layer.cornerRadius = 10
@@ -76,16 +77,13 @@ final class CreateNameViewController: UIViewController {
     }
     
     // MARK: Setup
-    
     private func setup() {
         let viewController = self
-        let interactor = CreateProfileInteractor()
-        let presenter = CreateProfilePresenter()
-        let router = CreateProfileRouter()
+        let worker = CreateNameWorker()
+        let interactor = CreateNameInteractor(worker: worker)
+        let router = CreateNameRouter()
         viewController.interactor = interactor
         viewController.router = router
-        interactor.presenter = presenter
-        presenter.viewController = viewController
         router.viewController = viewController
         router.dataStore = interactor
     }
