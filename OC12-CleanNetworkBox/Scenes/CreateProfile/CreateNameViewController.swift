@@ -3,18 +3,12 @@
 //  OC12-CleanNetworkBox
 //
 //  Created by Walim Aloui on 11/08/2023.
-//  Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
-
 
 import UIKit
 
-protocol CreateProfileDisplayLogic: AnyObject {
-    func displaySomething(viewModel: CreateProfile.Something.ViewModel)
-}
-
-final class CreateProfileViewController: UIViewController, CreateProfileDisplayLogic {
-    var interactor: CreateProfileBusinessLogic?
-    var router: (NSObjectProtocol & CreateProfileRoutingLogic & CreateProfileDataPassing)?
+final class CreateNameViewController: UIViewController {
+    var interactor: CreateNameBusinessLogic?
+    var router: (NSObjectProtocol & CreateNameRoutingLogic & CreateNameDataPassing)?
     
     // MARK: - UI Properties
     let indicationLabel: UILabel = {
@@ -144,7 +138,7 @@ extension CreateProfileViewController: UITextFieldDelegate {
         }
         return true
     }
-   
+
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
         nextButton.isEnabled = false
         return true
@@ -158,9 +152,9 @@ extension CreateProfileViewController: UITextFieldDelegate {
 
 
 // MARK: - User Interface Configuration
-extension CreateProfileViewController {
+extension CreateNameViewController {
     private func setupUI() {
-        
+        title = "Nom"
         view.backgroundColor = UIColor(red: 0.12, green: 0.12, blue: 0.12, alpha: 1.00)
         view.addSubview(indicationLabel)
         view.addSubview(stackView)
