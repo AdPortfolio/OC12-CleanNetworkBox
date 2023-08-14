@@ -11,6 +11,8 @@ final class CreateNameViewController: UIViewController {
     var router: (NSObjectProtocol & CreateNameRoutingLogic & CreateNameDataPassing)?
     
     // MARK: - UI Properties
+    private var nextButtonBottomConstraint: NSLayoutConstraint!
+    
     let indicationLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
@@ -103,7 +105,9 @@ final class CreateNameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        doSomething()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -111,26 +115,52 @@ final class CreateNameViewController: UIViewController {
         textField.becomeFirstResponder()
     }
     
-    // MARK: Do something
+    // MARK: - Deinitialization
     
-    //@IBOutlet weak var nameTextField: UITextField!
-    
-    func doSomething() {
-        let request = CreateProfile.Something.Request()
-        interactor?.doSomething(request: request)
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
-    func displaySomething(viewModel: CreateProfile.Something.ViewModel) {
-        //nameTextField.text = viewModel.name
+    // MARK: - Methods
+    @objc private func goToNextScreen() {
+        let enteredName = textField.text ?? ""
+        interactor?.saveEnteredName(request: .init(firstName: enteredName))
+        routeToCreateCompany()
+    }
+    
+    @objc func keyboardWillShow(_ notification: Notification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            let distanceToButton = view.frame.maxY - nextButton.frame.maxY
+            
+            if keyboardSize.height > distanceToButton {
+                let offsetY = keyboardSize.height - distanceToButton + 50
+                nextButtonBottomConstraint.constant = -offsetY
+                UIView.animate(withDuration: 0.3) {
+                    self.view.layoutIfNeeded()
+                }
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(_ notification: Notification) {
+        nextButtonBottomConstraint.constant = -44
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    // MARK: - Routing
+    func routeToCreateCompany() {
+        router?.routeToCreateCompany()
     }
 }
 
 // MARK: - Text Field Delegate {
 extension CreateProfileViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-
+        
         let newText = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) ?? ""
-
+        
         if newText.isEmpty {
             nextButton.isEnabled = false
         } else {
@@ -172,8 +202,6 @@ extension CreateNameViewController {
         stackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20).isActive = true
         stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20).isActive = true
         
-        nextButton.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 60).isActive = true
-        nextButton.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor).isActive = true
         nextButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20).isActive = true
         nextButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20).isActive = true
         nextButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
