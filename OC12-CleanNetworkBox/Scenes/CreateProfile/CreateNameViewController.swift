@@ -16,8 +16,8 @@ final class CreateNameViewController: UIViewController {
         label.textAlignment = .center
         label.numberOfLines = 0
         label.textColor = .white
-        label.font = UIFont(name: "Montserrat", size: 30)
-        label.text = "Commençons par saisir votre nom"
+        label.font = UIFont(name: "Montserrat", size: 20)
+        label.text = "Commençons par saisir votre prénom"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -25,6 +25,7 @@ final class CreateNameViewController: UIViewController {
     let stackView: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
+        stack.layer.cornerRadius = 5
         stack.backgroundColor = UIColor(red: 0.22, green: 0.22, blue: 0.23, alpha: 1.00)
         stack.translatesAutoresizingMaskIntoConstraints = false
         return stack
@@ -99,15 +100,14 @@ final class CreateNameViewController: UIViewController {
     }
     
     // MARK: View lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         doSomething()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         textField.becomeFirstResponder()
     }
     
@@ -160,7 +160,7 @@ extension CreateNameViewController {
         view.addSubview(stackView)
         view.addSubview(nextButton)
         
-        indicationLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 80).isActive = true
+        indicationLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50).isActive = true
         indicationLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30).isActive = true
         indicationLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30).isActive = true
         
@@ -177,5 +177,8 @@ extension CreateNameViewController {
         nextButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20).isActive = true
         nextButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20).isActive = true
         nextButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        nextButtonBottomConstraint = nextButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -44)
+        nextButtonBottomConstraint.isActive = true
+        nameLabel.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 8).isActive = true
     }
 }
