@@ -103,7 +103,6 @@ final class CreateNameViewController: UIViewController {
     }
     
     // MARK: - Deinitialization
-    
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
@@ -143,27 +142,41 @@ final class CreateNameViewController: UIViewController {
 }
 
 // MARK: - Text Field Delegate {
-extension CreateProfileViewController: UITextFieldDelegate {
+extension CreateNameViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         let newText = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) ?? ""
         
         if newText.isEmpty {
-            nextButton.isEnabled = false
+            disableNextButton()
         } else {
-            nextButton.isEnabled = true
+            enableNextButton()
         }
         return true
     }
 
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
-        nextButton.isEnabled = false
+        disableNextButton()
         return true
     }
     
     // MARK: - Helpers
-    private func updateButtonState() {
-        nextButton.isEnabled = !(textField.text?.isEmpty ?? true)
+    private func enableNextButton() {
+        nextButton.isEnabled = true
+        changeButtonColorWithFade(button: nextButton, color: .systemOrange)
+    }
+    
+    private func disableNextButton() {
+        nextButton.isEnabled = false
+        changeButtonColorWithFade(button: nextButton, color: .white)
+    }
+    
+    // TODO: Move to UIButton Extension
+    private func changeButtonColorWithFade(button: UIButton, color: UIColor) {
+        let animator = UIViewPropertyAnimator(duration: 0.5, curve: .linear) {
+            button.backgroundColor = color
+        }
+        animator.startAnimation()
     }
 }
 
