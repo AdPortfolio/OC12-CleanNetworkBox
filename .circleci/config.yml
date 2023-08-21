@@ -15,8 +15,11 @@ jobs:
           command: bundle exec fastlane $FASTLANE_LANE
       - run:
           name: Run tests
-          command: | xcodebuild clean build test -project OC12-CleanNetworkBox.xcodeproj -scheme OC12-CleanNetworkBox -destination 'platform=iOS Simulator,OS=15.0,name=iPhone 13'
-workflows:  
+          command: |
+            xcodebuild clean build test -project OC12-CleanNetworkBox.xcodeproj -scheme OC12-CleanNetworkBox -destination 'platform=iOS Simulator,OS=15.0,name=iPhone 13'
+
+workflows:
+  version: 2
   build-and-test:
     jobs:
       - build-and-test
