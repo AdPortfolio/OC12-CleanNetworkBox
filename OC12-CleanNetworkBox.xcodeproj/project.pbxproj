@@ -7,18 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5920565F2A893C720084E9B0 /* CreateCompanyViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5920565E2A893C720084E9B0 /* CreateCompanyViewControllerTests.swift */; };
 		5958F6772A86FF8100CB9B17 /* Montserrat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5958F6762A86FF8100CB9B17 /* Montserrat.ttf */; };
+		5958F6802A871A9E00CB9B17 /* CreateCompanyWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5958F67A2A871A9D00CB9B17 /* CreateCompanyWorker.swift */; };
+		5958F6812A871A9E00CB9B17 /* CreateCompanyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5958F67B2A871A9D00CB9B17 /* CreateCompanyRouter.swift */; };
+		5958F6822A871A9E00CB9B17 /* CreateCompanyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5958F67C2A871A9D00CB9B17 /* CreateCompanyModels.swift */; };
+		5958F6832A871A9E00CB9B17 /* CreateCompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5958F67D2A871A9D00CB9B17 /* CreateCompanyViewController.swift */; };
+		5958F6842A871A9E00CB9B17 /* CreateCompanyInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5958F67E2A871A9D00CB9B17 /* CreateCompanyInteractor.swift */; };
 		596613F62A86CE27007FA251 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596613F52A86CE27007FA251 /* AppDelegate.swift */; };
-		596613FA2A86CE27007FA251 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596613F92A86CE27007FA251 /* ViewController.swift */; };
 		596613FF2A86CE28007FA251 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 596613FE2A86CE28007FA251 /* Assets.xcassets */; };
 		596614022A86CE28007FA251 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 596614002A86CE28007FA251 /* LaunchScreen.storyboard */; };
 		5966140D2A86CE29007FA251 /* CreateProfileViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966140C2A86CE29007FA251 /* CreateProfileViewControllerTests.swift */; };
-		5966142E2A86D281007FA251 /* CreateProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596614282A86D281007FA251 /* CreateProfilePresenter.swift */; };
-		5966142F2A86D281007FA251 /* CreateProfileWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596614292A86D281007FA251 /* CreateProfileWorker.swift */; };
-		596614302A86D281007FA251 /* CreateProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966142A2A86D281007FA251 /* CreateProfileRouter.swift */; };
-		596614312A86D281007FA251 /* CreateProfileModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966142B2A86D281007FA251 /* CreateProfileModels.swift */; };
-		596614322A86D281007FA251 /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966142C2A86D281007FA251 /* CreateProfileViewController.swift */; };
-		596614332A86D281007FA251 /* CreateProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966142D2A86D281007FA251 /* CreateProfileInteractor.swift */; };
+		5966142F2A86D281007FA251 /* CreateNameWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596614292A86D281007FA251 /* CreateNameWorker.swift */; };
+		596614302A86D281007FA251 /* CreateNameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966142A2A86D281007FA251 /* CreateNameRouter.swift */; };
+		596614312A86D281007FA251 /* CreateNameModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966142B2A86D281007FA251 /* CreateNameModels.swift */; };
+		596614322A86D281007FA251 /* CreateNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966142C2A86D281007FA251 /* CreateNameViewController.swift */; };
+		596614332A86D281007FA251 /* CreateNameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966142D2A86D281007FA251 /* CreateNameInteractor.swift */; };
+		597942E32A8A4C6E00F7DD93 /* ProContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597942E22A8A4C6E00F7DD93 /* ProContact.swift */; };
+		597942E52A8A528800F7DD93 /* ProContactWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597942E42A8A528800F7DD93 /* ProContactWorker.swift */; };
+		597942ED2A8AB6AA00F7DD93 /* AddProfileImagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597942E72A8AB6AA00F7DD93 /* AddProfileImagePresenter.swift */; };
+		597942EE2A8AB6AA00F7DD93 /* AddProfileImageWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597942E82A8AB6AA00F7DD93 /* AddProfileImageWorker.swift */; };
+		597942EF2A8AB6AA00F7DD93 /* AddProfileImageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597942E92A8AB6AA00F7DD93 /* AddProfileImageRouter.swift */; };
+		597942F02A8AB6AA00F7DD93 /* AddProfileImageModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597942EA2A8AB6AA00F7DD93 /* AddProfileImageModels.swift */; };
+		597942F12A8AB6AA00F7DD93 /* AddProfileImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597942EB2A8AB6AA00F7DD93 /* AddProfileImageViewController.swift */; };
+		597942F22A8AB6AA00F7DD93 /* AddProfileImageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597942EC2A8AB6AA00F7DD93 /* AddProfileImageInteractor.swift */; };
+		5995EAE62A8D1E8000575E0D /* CreateProfileMailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995EAE02A8D1E8000575E0D /* CreateProfileMailPresenter.swift */; };
+		5995EAE72A8D1E8000575E0D /* CreateProfileMailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995EAE12A8D1E8000575E0D /* CreateProfileMailWorker.swift */; };
+		5995EAE82A8D1E8000575E0D /* CreateProfileMailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995EAE22A8D1E8000575E0D /* CreateProfileMailRouter.swift */; };
+		5995EAE92A8D1E8000575E0D /* CreateProfileMailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995EAE32A8D1E8000575E0D /* CreateProfileMailModels.swift */; };
+		5995EAEA2A8D1E8000575E0D /* CreateProfileMailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995EAE42A8D1E8000575E0D /* CreateProfileMailViewController.swift */; };
+		5995EAEB2A8D1E8000575E0D /* CreateProfileMailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995EAE52A8D1E8000575E0D /* CreateProfileMailInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,22 +50,40 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5920565E2A893C720084E9B0 /* CreateCompanyViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCompanyViewControllerTests.swift; sourceTree = "<group>"; };
 		5958F6752A86F6A500CB9B17 /* OC12-CleanNetworkBox.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "OC12-CleanNetworkBox.xctestplan"; sourceTree = "<group>"; };
 		5958F6762A86FF8100CB9B17 /* Montserrat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Montserrat.ttf; sourceTree = SOURCE_ROOT; };
+		5958F67A2A871A9D00CB9B17 /* CreateCompanyWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCompanyWorker.swift; sourceTree = "<group>"; };
+		5958F67B2A871A9D00CB9B17 /* CreateCompanyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCompanyRouter.swift; sourceTree = "<group>"; };
+		5958F67C2A871A9D00CB9B17 /* CreateCompanyModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCompanyModels.swift; sourceTree = "<group>"; };
+		5958F67D2A871A9D00CB9B17 /* CreateCompanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCompanyViewController.swift; sourceTree = "<group>"; };
+		5958F67E2A871A9D00CB9B17 /* CreateCompanyInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCompanyInteractor.swift; sourceTree = "<group>"; };
 		596613F22A86CE27007FA251 /* OC12-CleanNetworkBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OC12-CleanNetworkBox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		596613F52A86CE27007FA251 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		596613F92A86CE27007FA251 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		596613FE2A86CE28007FA251 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		596614012A86CE28007FA251 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		596614032A86CE28007FA251 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		596614082A86CE29007FA251 /* OC12-CleanNetworkBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OC12-CleanNetworkBoxTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5966140C2A86CE29007FA251 /* CreateProfileViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileViewControllerTests.swift; sourceTree = "<group>"; };
-		596614282A86D281007FA251 /* CreateProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfilePresenter.swift; sourceTree = "<group>"; };
-		596614292A86D281007FA251 /* CreateProfileWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileWorker.swift; sourceTree = "<group>"; };
-		5966142A2A86D281007FA251 /* CreateProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileRouter.swift; sourceTree = "<group>"; };
-		5966142B2A86D281007FA251 /* CreateProfileModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileModels.swift; sourceTree = "<group>"; };
-		5966142C2A86D281007FA251 /* CreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
-		5966142D2A86D281007FA251 /* CreateProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileInteractor.swift; sourceTree = "<group>"; };
+		596614292A86D281007FA251 /* CreateNameWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNameWorker.swift; sourceTree = "<group>"; };
+		5966142A2A86D281007FA251 /* CreateNameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNameRouter.swift; sourceTree = "<group>"; };
+		5966142B2A86D281007FA251 /* CreateNameModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNameModels.swift; sourceTree = "<group>"; };
+		5966142C2A86D281007FA251 /* CreateNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNameViewController.swift; sourceTree = "<group>"; };
+		5966142D2A86D281007FA251 /* CreateNameInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNameInteractor.swift; sourceTree = "<group>"; };
+		597942E22A8A4C6E00F7DD93 /* ProContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProContact.swift; sourceTree = "<group>"; };
+		597942E42A8A528800F7DD93 /* ProContactWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProContactWorker.swift; sourceTree = "<group>"; };
+		597942E72A8AB6AA00F7DD93 /* AddProfileImagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProfileImagePresenter.swift; sourceTree = "<group>"; };
+		597942E82A8AB6AA00F7DD93 /* AddProfileImageWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProfileImageWorker.swift; sourceTree = "<group>"; };
+		597942E92A8AB6AA00F7DD93 /* AddProfileImageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProfileImageRouter.swift; sourceTree = "<group>"; };
+		597942EA2A8AB6AA00F7DD93 /* AddProfileImageModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProfileImageModels.swift; sourceTree = "<group>"; };
+		597942EB2A8AB6AA00F7DD93 /* AddProfileImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProfileImageViewController.swift; sourceTree = "<group>"; };
+		597942EC2A8AB6AA00F7DD93 /* AddProfileImageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProfileImageInteractor.swift; sourceTree = "<group>"; };
+		5995EAE02A8D1E8000575E0D /* CreateProfileMailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileMailPresenter.swift; sourceTree = "<group>"; };
+		5995EAE12A8D1E8000575E0D /* CreateProfileMailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileMailWorker.swift; sourceTree = "<group>"; };
+		5995EAE22A8D1E8000575E0D /* CreateProfileMailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileMailRouter.swift; sourceTree = "<group>"; };
+		5995EAE32A8D1E8000575E0D /* CreateProfileMailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileMailModels.swift; sourceTree = "<group>"; };
+		5995EAE42A8D1E8000575E0D /* CreateProfileMailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileMailViewController.swift; sourceTree = "<group>"; };
+		5995EAE52A8D1E8000575E0D /* CreateProfileMailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileMailInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +104,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5920565D2A8932920084E9B0 /* CreateCompany */ = {
+			isa = PBXGroup;
+			children = (
+				5920565E2A893C720084E9B0 /* CreateCompanyViewControllerTests.swift */,
+			);
+			path = CreateCompany;
+			sourceTree = "<group>";
+		};
+		592056602A89ED030084E9B0 /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				597942E42A8A528800F7DD93 /* ProContactWorker.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		5958F6782A871A6200CB9B17 /* CreateCompany */ = {
+			isa = PBXGroup;
+			children = (
+				5958F67D2A871A9D00CB9B17 /* CreateCompanyViewController.swift */,
+				5958F67E2A871A9D00CB9B17 /* CreateCompanyInteractor.swift */,
+				5958F67B2A871A9D00CB9B17 /* CreateCompanyRouter.swift */,
+				5958F67C2A871A9D00CB9B17 /* CreateCompanyModels.swift */,
+				5958F67A2A871A9D00CB9B17 /* CreateCompanyWorker.swift */,
+			);
+			path = CreateCompany;
+			sourceTree = "<group>";
+		};
 		596613E92A86CE27007FA251 = {
 			isa = PBXGroup;
 			children = (
@@ -91,8 +155,9 @@
 			isa = PBXGroup;
 			children = (
 				596613F52A86CE27007FA251 /* AppDelegate.swift */,
+				597942E12A8A4C5B00F7DD93 /* Models */,
+				592056602A89ED030084E9B0 /* Workers */,
 				596614262A86CF6D007FA251 /* Scenes */,
-				596613F92A86CE27007FA251 /* ViewController.swift */,
 				596613FE2A86CE28007FA251 /* Assets.xcassets */,
 				596614002A86CE28007FA251 /* LaunchScreen.storyboard */,
 				5958F6762A86FF8100CB9B17 /* Montserrat.ttf */,
@@ -113,6 +178,9 @@
 			isa = PBXGroup;
 			children = (
 				596614272A86CF92007FA251 /* CreateProfile */,
+				5958F6782A871A6200CB9B17 /* CreateCompany */,
+				597942E62A8AB5A000F7DD93 /* AddProfileImage */,
+				5995EADF2A8D1E4500575E0D /* CreateProfileMail */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -120,12 +188,11 @@
 		596614272A86CF92007FA251 /* CreateProfile */ = {
 			isa = PBXGroup;
 			children = (
-				5966142C2A86D281007FA251 /* CreateProfileViewController.swift */,
-				5966142D2A86D281007FA251 /* CreateProfileInteractor.swift */,
-				596614282A86D281007FA251 /* CreateProfilePresenter.swift */,
-				5966142A2A86D281007FA251 /* CreateProfileRouter.swift */,
-				5966142B2A86D281007FA251 /* CreateProfileModels.swift */,
-				596614292A86D281007FA251 /* CreateProfileWorker.swift */,
+				5966142C2A86D281007FA251 /* CreateNameViewController.swift */,
+				5966142D2A86D281007FA251 /* CreateNameInteractor.swift */,
+				5966142A2A86D281007FA251 /* CreateNameRouter.swift */,
+				5966142B2A86D281007FA251 /* CreateNameModels.swift */,
+				596614292A86D281007FA251 /* CreateNameWorker.swift */,
 			);
 			path = CreateProfile;
 			sourceTree = "<group>";
@@ -133,17 +200,52 @@
 		596614342A86F03B007FA251 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				596614352A86F042007FA251 /* CreateProfile */,
+				596614352A86F042007FA251 /* CreateName */,
+				5920565D2A8932920084E9B0 /* CreateCompany */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		596614352A86F042007FA251 /* CreateProfile */ = {
+		596614352A86F042007FA251 /* CreateName */ = {
 			isa = PBXGroup;
 			children = (
 				5966140C2A86CE29007FA251 /* CreateProfileViewControllerTests.swift */,
 			);
-			path = CreateProfile;
+			path = CreateName;
+			sourceTree = "<group>";
+		};
+		597942E12A8A4C5B00F7DD93 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				597942E22A8A4C6E00F7DD93 /* ProContact.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		597942E62A8AB5A000F7DD93 /* AddProfileImage */ = {
+			isa = PBXGroup;
+			children = (
+				597942EB2A8AB6AA00F7DD93 /* AddProfileImageViewController.swift */,
+				597942EC2A8AB6AA00F7DD93 /* AddProfileImageInteractor.swift */,
+				597942E72A8AB6AA00F7DD93 /* AddProfileImagePresenter.swift */,
+				597942E82A8AB6AA00F7DD93 /* AddProfileImageWorker.swift */,
+				597942E92A8AB6AA00F7DD93 /* AddProfileImageRouter.swift */,
+				597942EA2A8AB6AA00F7DD93 /* AddProfileImageModels.swift */,
+			);
+			path = AddProfileImage;
+			sourceTree = "<group>";
+		};
+		5995EADF2A8D1E4500575E0D /* CreateProfileMail */ = {
+			isa = PBXGroup;
+			children = (
+				5995EAE42A8D1E8000575E0D /* CreateProfileMailViewController.swift */,
+				5995EAE02A8D1E8000575E0D /* CreateProfileMailPresenter.swift */,
+				5995EAE12A8D1E8000575E0D /* CreateProfileMailWorker.swift */,
+				5995EAE22A8D1E8000575E0D /* CreateProfileMailRouter.swift */,
+				5995EAE32A8D1E8000575E0D /* CreateProfileMailModels.swift */,
+				5995EAE52A8D1E8000575E0D /* CreateProfileMailInteractor.swift */,
+			);
+			path = CreateProfileMail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,14 +349,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				596614332A86D281007FA251 /* CreateProfileInteractor.swift in Sources */,
-				596613FA2A86CE27007FA251 /* ViewController.swift in Sources */,
-				596614312A86D281007FA251 /* CreateProfileModels.swift in Sources */,
+				596614332A86D281007FA251 /* CreateNameInteractor.swift in Sources */,
+				596614312A86D281007FA251 /* CreateNameModels.swift in Sources */,
+				5958F6822A871A9E00CB9B17 /* CreateCompanyModels.swift in Sources */,
 				596613F62A86CE27007FA251 /* AppDelegate.swift in Sources */,
-				596614302A86D281007FA251 /* CreateProfileRouter.swift in Sources */,
-				5966142E2A86D281007FA251 /* CreateProfilePresenter.swift in Sources */,
-				5966142F2A86D281007FA251 /* CreateProfileWorker.swift in Sources */,
-				596614322A86D281007FA251 /* CreateProfileViewController.swift in Sources */,
+				597942EF2A8AB6AA00F7DD93 /* AddProfileImageRouter.swift in Sources */,
+				5958F6812A871A9E00CB9B17 /* CreateCompanyRouter.swift in Sources */,
+				5958F6832A871A9E00CB9B17 /* CreateCompanyViewController.swift in Sources */,
+				5995EAE72A8D1E8000575E0D /* CreateProfileMailWorker.swift in Sources */,
+				5995EAEB2A8D1E8000575E0D /* CreateProfileMailInteractor.swift in Sources */,
+				597942ED2A8AB6AA00F7DD93 /* AddProfileImagePresenter.swift in Sources */,
+				5995EAE82A8D1E8000575E0D /* CreateProfileMailRouter.swift in Sources */,
+				5995EAE92A8D1E8000575E0D /* CreateProfileMailModels.swift in Sources */,
+				596614302A86D281007FA251 /* CreateNameRouter.swift in Sources */,
+				597942E52A8A528800F7DD93 /* ProContactWorker.swift in Sources */,
+				597942F12A8AB6AA00F7DD93 /* AddProfileImageViewController.swift in Sources */,
+				597942F22A8AB6AA00F7DD93 /* AddProfileImageInteractor.swift in Sources */,
+				5995EAEA2A8D1E8000575E0D /* CreateProfileMailViewController.swift in Sources */,
+				5966142F2A86D281007FA251 /* CreateNameWorker.swift in Sources */,
+				597942E32A8A4C6E00F7DD93 /* ProContact.swift in Sources */,
+				5995EAE62A8D1E8000575E0D /* CreateProfileMailPresenter.swift in Sources */,
+				597942EE2A8AB6AA00F7DD93 /* AddProfileImageWorker.swift in Sources */,
+				596614322A86D281007FA251 /* CreateNameViewController.swift in Sources */,
+				5958F6802A871A9E00CB9B17 /* CreateCompanyWorker.swift in Sources */,
+				597942F02A8AB6AA00F7DD93 /* AddProfileImageModels.swift in Sources */,
+				5958F6842A871A9E00CB9B17 /* CreateCompanyInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5920565F2A893C720084E9B0 /* CreateCompanyViewControllerTests.swift in Sources */,
 				5966140D2A86CE29007FA251 /* CreateProfileViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,13 +591,17 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S25TANK5XP;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Veuillez autoriser l'accès à votre Photothèque";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "adpiscinam.OC12-CleanNetworkBoxTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OC12-CleanNetworkBox.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/OC12-CleanNetworkBox";
 			};
 			name = Debug;
@@ -491,13 +615,17 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S25TANK5XP;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Veuillez autoriser l'accès à votre Photothèque";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "adpiscinam.OC12-CleanNetworkBoxTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OC12-CleanNetworkBox.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/OC12-CleanNetworkBox";
 			};
 			name = Release;

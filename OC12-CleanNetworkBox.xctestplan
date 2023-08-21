@@ -13,7 +13,8 @@
       "containerPath" : "container:OC12-CleanNetworkBox.xcodeproj",
       "identifier" : "596613F12A86CE27007FA251",
       "name" : "OC12-CleanNetworkBox"
-    }
+    },
+    "uiTestingScreenshotsLifetime" : "keepNever"
   },
   "testTargets" : [
     {
