@@ -45,7 +45,7 @@ final class CreateCompanyViewControllerTests: XCTestCase {
     func test_viewDidLoad_jobTextFieldIsIsSetCorrectly() {
         let sut = makeSUT()
 
-        let textField = sut.jobTextField
+        let textField = sut.funtionTextField
         
         XCTAssertNotNil(textField)
         XCTAssertFalse(textField.translatesAutoresizingMaskIntoConstraints)
