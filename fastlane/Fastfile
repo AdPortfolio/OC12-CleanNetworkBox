@@ -5,8 +5,13 @@ platform :ios do
          setup_circle_ci
     end
 
+    desc "Runs all the tests"
+ 	 lane :test do
+  	     scan
+     end
+
     lane :register_app do
-       produce
+       produce()
     end
 
     lane :get_dev_certs do
