@@ -1,0 +1,5 @@
+# .gitignore dans le dossier fastlane
+Appfile
+Fastfile
+README.md
+report.xml
