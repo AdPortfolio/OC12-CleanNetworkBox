@@ -12,23 +12,23 @@ import UIKit
 }
 
 protocol CreateNameDataPassing {
-  var dataStore: CreateNameDataStore? { get }
+    var dataStore: CreateNameDataStore? { get }
 }
 
-class CreateNameRouter: NSObject, CreateNameRoutingLogic, CreateNameDataPassing {
+final class CreateNameRouter: NSObject, CreateNameRoutingLogic, CreateNameDataPassing {
     
-  weak var viewController: CreateNameViewController?
-  var dataStore: CreateNameDataStore?
-  
-  // MARK: Routing
+    weak var viewController: CreateNameViewController?
+    var dataStore: CreateNameDataStore?
+    
+    // MARK: Routing
     func routeToCreateCompany() {
         let destinationVC = CreateCompanyViewController()
         guard let viewController = viewController else { return }
-        navigateToSomewhere(source: viewController, destination: destinationVC)
+        navigateToCreateCompany(source: viewController, destination: destinationVC)
     }
-
-  // MARK: Navigation
-    func navigateToSomewhere(source: CreateNameViewController, destination: CreateCompanyViewController) {
-        source.navigationController?.show(destination, sender: nil) // .show(destination, sender: nil)
+    
+    // MARK: Navigation
+    func navigateToCreateCompany(source: CreateNameViewController, destination: CreateCompanyViewController) {
+        source.navigationController?.show(destination, sender: nil)
     }
 }

@@ -54,7 +54,7 @@ final class CreateNameViewController: UIViewController {
     lazy var nextButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("SUIVANT", for: .normal)
-        button.addTarget(self, action: #selector(goToNextScreen), for: .touchUpInside)
+        button.addTarget(self, action: #selector(goToCreateCompanyScreen), for: .touchUpInside)
         button.backgroundColor = .white
         button.tintColor = .darkGray
         button.layer.cornerRadius = 10
@@ -64,8 +64,7 @@ final class CreateNameViewController: UIViewController {
         return button
     }()
     
-    // MARK: Object lifecycle
-    
+    // MARK: Object Lifecycle
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
@@ -87,7 +86,7 @@ final class CreateNameViewController: UIViewController {
         router.viewController = viewController
         router.dataStore = interactor
     }
-    
+
     // MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -108,7 +107,7 @@ final class CreateNameViewController: UIViewController {
     }
     
     // MARK: - Methods
-    @objc private func goToNextScreen() {
+    @objc private func goToCreateCompanyScreen() {
         let enteredName = textField.text ?? ""
         interactor?.saveEnteredName(request: .init(firstName: enteredName))
         routeToCreateCompany()
