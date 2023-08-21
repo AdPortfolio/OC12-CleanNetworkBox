@@ -22,13 +22,6 @@
 			remoteGlobalIDString = 596613F12A86CE27007FA251;
 			remoteInfo = "OC12-CleanNetworkBox";
 		};
-		596614132A86CE29007FA251 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 596613EA2A86CE27007FA251 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 596613F12A86CE27007FA251;
-			remoteInfo = "OC12-CleanNetworkBox";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +33,6 @@
 		596614032A86CE28007FA251 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		596614082A86CE29007FA251 /* OC12-CleanNetworkBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OC12-CleanNetworkBoxTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5966140C2A86CE29007FA251 /* OC12_CleanNetworkBoxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OC12_CleanNetworkBoxTests.swift; sourceTree = "<group>"; };
-		596614122A86CE29007FA251 /* OC12-CleanNetworkBoxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OC12-CleanNetworkBoxUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,13 +44,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		596614052A86CE29007FA251 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5966140F2A86CE29007FA251 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -82,7 +67,6 @@
 			children = (
 				596613F22A86CE27007FA251 /* OC12-CleanNetworkBox.app */,
 				596614082A86CE29007FA251 /* OC12-CleanNetworkBoxTests.xctest */,
-				596614122A86CE29007FA251 /* OC12-CleanNetworkBoxUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,24 +129,6 @@
 			productReference = 596614082A86CE29007FA251 /* OC12-CleanNetworkBoxTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		596614112A86CE29007FA251 /* OC12-CleanNetworkBoxUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 596614222A86CE29007FA251 /* Build configuration list for PBXNativeTarget "OC12-CleanNetworkBoxUITests" */;
-			buildPhases = (
-				5966140E2A86CE29007FA251 /* Sources */,
-				5966140F2A86CE29007FA251 /* Frameworks */,
-				596614102A86CE29007FA251 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				596614142A86CE29007FA251 /* PBXTargetDependency */,
-			);
-			name = "OC12-CleanNetworkBoxUITests";
-			productName = "OC12-CleanNetworkBoxUITests";
-			productReference = 596614122A86CE29007FA251 /* OC12-CleanNetworkBoxUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -177,10 +143,6 @@
 						CreatedOnToolsVersion = 14.3.1;
 					};
 					596614072A86CE29007FA251 = {
-						CreatedOnToolsVersion = 14.3.1;
-						TestTargetID = 596613F12A86CE27007FA251;
-					};
-					596614112A86CE29007FA251 = {
 						CreatedOnToolsVersion = 14.3.1;
 						TestTargetID = 596613F12A86CE27007FA251;
 					};
@@ -201,7 +163,6 @@
 			targets = (
 				596613F12A86CE27007FA251 /* OC12-CleanNetworkBox */,
 				596614072A86CE29007FA251 /* OC12-CleanNetworkBoxTests */,
-				596614112A86CE29007FA251 /* OC12-CleanNetworkBoxUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -217,13 +178,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		596614062A86CE29007FA251 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		596614102A86CE29007FA251 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -250,13 +204,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5966140E2A86CE29007FA251 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -264,11 +211,6 @@
 			isa = PBXTargetDependency;
 			target = 596613F12A86CE27007FA251 /* OC12-CleanNetworkBox */;
 			targetProxy = 596614092A86CE29007FA251 /* PBXContainerItemProxy */;
-		};
-		596614142A86CE29007FA251 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 596613F12A86CE27007FA251 /* OC12-CleanNetworkBox */;
-			targetProxy = 596614132A86CE29007FA251 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -498,42 +440,6 @@
 			};
 			name = Release;
 		};
-		596614232A86CE29007FA251 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = S25TANK5XP;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "adpiscinam.OC12-CleanNetworkBoxUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "OC12-CleanNetworkBox";
-			};
-			name = Debug;
-		};
-		596614242A86CE29007FA251 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = S25TANK5XP;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "adpiscinam.OC12-CleanNetworkBoxUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "OC12-CleanNetworkBox";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -560,15 +466,6 @@
 			buildConfigurations = (
 				596614202A86CE29007FA251 /* Debug */,
 				596614212A86CE29007FA251 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		596614222A86CE29007FA251 /* Build configuration list for PBXNativeTarget "OC12-CleanNetworkBoxUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				596614232A86CE29007FA251 /* Debug */,
-				596614242A86CE29007FA251 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
