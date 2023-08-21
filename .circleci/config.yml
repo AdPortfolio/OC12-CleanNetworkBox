@@ -19,8 +19,7 @@ jobs:
           command: |
             xcodebuild clean build test -project OC12-CleanNetworkBox.xcodeproj -scheme OC12-CleanNetworkBox -destination 'platform=iOS Simulator,OS=15.0,name=iPhone 13'
 
-workflows:
-  version: 2
+workflows:  
   build-and-test:
     jobs:
       - build-and-test
