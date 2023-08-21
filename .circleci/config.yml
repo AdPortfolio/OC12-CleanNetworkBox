@@ -5,7 +5,9 @@ jobs:
     macos:
       xcode: 14.3.1
     environment:
-      FASTLANE_LANE: register_app
+    FASTLANE_USERNAME: ${FASTLANE_USERNAME}
+      FASTLANE_PASSWORD: ${FASTLANE_PASSWORD}
+    #  FASTLANE_LANE: register_app
     steps:
       - checkout
       - run: bundle install
@@ -18,7 +20,6 @@ jobs:
             xcodebuild clean build test -project OC12-CleanNetworkBox.xcodeproj -scheme OC12-CleanNetworkBox -destination 'platform=iOS Simulator,OS=15.0,name=iPhone 13'
 
 workflows:
-  version: 2.1
   build-and-test:
     jobs:
       - build-and-test
