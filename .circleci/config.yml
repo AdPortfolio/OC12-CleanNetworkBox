@@ -6,8 +6,8 @@ jobs:
       xcode: 14.3.1
     environment:
       FL_OUTPUT_DIR: output
-      FASTLANE_USERNAME: ${FASTLANE_USERNAME}
-      FASTLANE_PASSWORD: ${FASTLANE_PASSWORD}
+      FASTLANE_USERNAME: $FASTLANE_USERNAME
+      FASTLANE_PASSWORD: $FASTLANE_PASSWORD
     steps:
       - checkout
       - run: bundle install
