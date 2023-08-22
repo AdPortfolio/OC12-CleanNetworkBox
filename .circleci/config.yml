@@ -14,9 +14,6 @@ jobs:
       - run:
           name: Fastlane
           command: bundle exec fastlane register_app --verbose
-      # - run:
-      #     name: Run tests
-      #     command: bundle exec fastlane run_unit_test
   tests:
     steps:
       - run:
