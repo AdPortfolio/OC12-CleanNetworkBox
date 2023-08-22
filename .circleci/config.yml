@@ -5,18 +5,18 @@ jobs:
     macos:
       xcode: 14.3.1
     environment:
-        FL_OUTPUT_DIR: output
-        FASTLANE_USERNAME: ${FASTLANE_USERNAME}
-        FASTLANE_PASSWORD: ${FASTLANE_PASSWORD}
+      FL_OUTPUT_DIR: output
+      FASTLANE_USERNAME: ${FASTLANE_USERNAME}
+      FASTLANE_PASSWORD: ${FASTLANE_PASSWORD}
     steps:
       - checkout
       - run: bundle install
       - run:
           name: Fastlane
           command: bundle exec fastlane register_app --verbose
-    #  - run:
-    #      name: Run tests
-    #      command: bundle exec fastlane run_unit_test
+      # - run:
+      #     name: Run tests
+      #     command: bundle exec fastlane run_unit_test
   tests:
     steps:
       - run:
