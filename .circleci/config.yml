@@ -1,12 +1,11 @@
 version: 2.1
 
 jobs:
-  build-and-test:
+  build:
     macos:
       xcode: 14.3.1
     environment:
         FL_OUTPUT_DIR: output
-        FASTLANE_LANE: register_app
         FASTLANE_USERNAME: ${FASTLANE_USERNAME}
         FASTLANE_PASSWORD: ${FASTLANE_PASSWORD}
     steps:
@@ -14,13 +13,18 @@ jobs:
       - run: bundle install
       - run:
           name: Fastlane
-          command: bundle exec fastlane $FASTLANE_LANE --verbose 
+          command: bundle exec fastlane register_app --verbose
+    #  - run:
+    #      name: Run tests
+    #      command: bundle exec fastlane run_unit_test
+  tests:
+    steps:
       - run:
           name: Run tests
-          command: |
-            xcodebuild clean build test -project OC12-CleanNetworkBox.xcodeproj -scheme OC12-CleanNetworkBox -destination 'platform=iOS Simulator,OS=15.0,name=iPhone 13'
+          command: bundle exec fastlane run_unit_test
 
 workflows:
   build-and-test:
     jobs:
-      - build-and-test
+      - build
+      - tests
