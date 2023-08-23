@@ -17,4 +17,8 @@ platform :ios do
        cert(development: true)
        sigh(development: true)
     end
+
+    lane :run_unit_test do
+       scan
+    end
 end
