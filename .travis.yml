@@ -1,0 +1,10 @@
+language: swift
+os: osx
+osx_image: xcode14.2
+
+branches:
+  only:
+    - main
+
+script:
+  - xcodebuild clean build -project OC12-CleanNetworkBox.xcodeproj -scheme OC12-CleanNetworkBox -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=15.0,name=iPhone 11'
