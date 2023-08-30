@@ -1,12 +1,5 @@
-language: swift
+language: objective-c
 osx_image: xcode14.2
-os: osx
 xcode_project: OC12-CleanNetworkBox.xcodeproj
 xcode_scheme: OC12-CleanNetworkBox
-
-branches:
-  only:
-    - main
-
-script:
-  - xcodebuild clean build -project 'OC12-CleanNetworkBox.xcodeproj' -scheme 'OC12-CleanNetworkBox' -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=15.0,name=iPhone 14'
+xcode_destination: platform=iOS Simulator,OS=16.2,name=iPhone X
