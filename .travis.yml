@@ -11,3 +11,6 @@ branches:
 
 before_install:
   - git checkout createProfile_feature
+
+script:
+  - xcodebuild clean build test -project OC12-CleanNetworkBox.xcodeproj -scheme OC12-CleanNetworkBox -destination "platform=iOS Simulator,OS=16.2,name=iPhone 14 Pro Max"
