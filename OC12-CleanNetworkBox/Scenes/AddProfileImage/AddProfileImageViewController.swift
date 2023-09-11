@@ -6,16 +6,11 @@
 
 import UIKit
 
-protocol AddProfileImageDisplayLogic: AnyObject {
-    func displayPicture(viewModel: AddProfileImage.Picture.ViewModel)
-}
-
-final class AddProfileImageViewController: UIViewController, AddProfileImageDisplayLogic {
-
-    
+final class AddProfileImageViewController: UIViewController {
     var interactor: AddProfileImageBusinessLogic?
     var router: (NSObjectProtocol & AddProfileImageRoutingLogic & AddProfileImageDataPassing)?
     
+    // MARK: - UI Properties
     let imageView: UIImageView = {
         let view = UIImageView()
         view.backgroundColor = .yellow
@@ -48,12 +43,9 @@ final class AddProfileImageViewController: UIViewController, AddProfileImageDisp
     private func setup() {
         let viewController = self
         let interactor = AddProfileImageInteractor()
-        let presenter = AddProfileImagePresenter()
         let router = AddProfileImageRouter()
         viewController.interactor = interactor
         viewController.router = router
-        interactor.presenter = presenter
-        presenter.viewController = viewController
         router.viewController = viewController
         router.dataStore = interactor
     }
@@ -79,7 +71,7 @@ extension AddProfileImageViewController: UIImagePickerControllerDelegate, UINavi
         print("Hey")
         present(imagePicker, animated: true, completion: nil)
     }
-
+    
     // UIImagePickerControllerDelegate method to handle the selected image
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
