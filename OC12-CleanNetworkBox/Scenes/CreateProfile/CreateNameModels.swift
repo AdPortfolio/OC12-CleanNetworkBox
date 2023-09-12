@@ -7,13 +7,11 @@
 
 import UIKit
 
-enum CreateName {
+enum AddName {
     // MARK: Use cases
-    enum CreateName {
+    enum AddName {
         struct Request{
-            var firstName: String
+            var firstName: String?
         }
-        struct Response{}
-        struct ViewModel{}
     }
 }
