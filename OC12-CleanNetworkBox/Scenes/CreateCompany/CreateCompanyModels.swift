@@ -6,16 +6,23 @@
 
 import UIKit
 
-enum CreateCompany
-{
-  // MARK: Use cases
-  
-  enum Something {
-    struct Request {
+enum CreateCompany {
+    
+    struct OrderFormFields {
         var companyName: String
         var functionName: String
     }
-    struct Response {}
-      struct ViewModel {}
-  }
+    
+    enum CompanyField {
+        struct Request {
+            var companyName: String
+        }
+    }
+    
+    enum FunctionField {
+        struct Request {
+            var functionName: String
+        }
+    }
 }
+
