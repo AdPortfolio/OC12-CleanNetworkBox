@@ -90,9 +90,6 @@ final class CreateNameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -100,37 +97,11 @@ final class CreateNameViewController: UIViewController {
         textField.becomeFirstResponder()
     }
     
-    // MARK: - Deinitialization
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
-    
     // MARK: - Methods
     @objc private func goToCreateCompanyScreen() {
         let enteredName = textField.text ?? ""
         interactor?.saveEnteredName(request: .init(firstName: enteredName))
         routeToCreateCompany()
-    }
-    
-    @objc func keyboardWillShow(_ notification: Notification) {
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            let distanceToButton = view.frame.maxY - nextButton.frame.maxY
-            
-            if keyboardSize.height > distanceToButton {
-                let offsetY = keyboardSize.height - distanceToButton + 50
-                nextButtonBottomConstraint.constant = -offsetY
-                UIView.animate(withDuration: 0.3) {
-                    self.view.layoutIfNeeded()
-                }
-            }
-        }
-    }
-    
-    @objc func keyboardWillHide(_ notification: Notification) {
-        nextButtonBottomConstraint.constant = -44
-        UIView.animate(withDuration: 0.3) {
-            self.view.layoutIfNeeded()
-        }
     }
     
     // MARK: - Routing
@@ -152,7 +123,7 @@ extension CreateNameViewController: UITextFieldDelegate {
         }
         return true
     }
-
+    
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
         disableNextButton()
         return true
