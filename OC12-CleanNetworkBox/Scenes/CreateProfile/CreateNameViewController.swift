@@ -100,7 +100,7 @@ final class CreateNameViewController: UIViewController {
     // MARK: - Methods
     @objc private func goToCreateCompanyScreen() {
         let enteredName = textField.text ?? ""
-        interactor?.saveEnteredName(request: .init(firstName: enteredName))
+        interactor?.saveEnteredName(request: AddName.AddName.Request(firstName: enteredName))
         routeToCreateCompany()
     }
     
