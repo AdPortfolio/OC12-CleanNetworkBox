@@ -7,20 +7,21 @@
 import UIKit
 
 protocol CreateNameBusinessLogic {
-    func saveEnteredName(request: CreateName.CreateName.Request)
+    func saveEnteredName(request: AddName.AddName.Request)
 }
 
-protocol CreateNameDataStore{
-    var enteredName: String { get set }
+protocol CreateNameDataStore {
+    var profile: ProContactMO? { get set }
 }
 
 final class CreateNameInteractor: CreateNameBusinessLogic, CreateNameDataStore {
     
-    var worker: CreateNameWorker?
-    var enteredName: String = ""
+    var profile: ProContactMO?
+    private var proContactManager: ProContactRepository
     
-    init(worker: CreateNameWorker) {
-        self.worker = worker
+    // MARK: - Initialization
+    init(proContactManager: ProContactRepository = ProContactManager()) {
+        self.proContactManager = proContactManager
     }
     
     // MARK: - Methods
@@ -29,7 +30,7 @@ final class CreateNameInteractor: CreateNameBusinessLogic, CreateNameDataStore {
         worker?.saveNameToDatabase(firstName: request.firstName)
     }
     
-    func getEnteredName() -> String {
-        return enteredName
+    func getEnteredName() -> ProContactMO? {
+        return profile
     }
 }
