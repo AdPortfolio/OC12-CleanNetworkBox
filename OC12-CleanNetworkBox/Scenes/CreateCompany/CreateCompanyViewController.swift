@@ -11,8 +11,6 @@ final class CreateCompanyViewController: UIViewController {
     var router: (NSObjectProtocol & CreateCompanyRoutingLogic & CreateCompanyDataPassing)?
     
     // MARK: - UI Properties
-    private var nextButtonBottomConstraint: NSLayoutConstraint!
-    
     let indicationLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
@@ -32,11 +30,12 @@ final class CreateCompanyViewController: UIViewController {
         return label
     }()
     
-    lazy var funtionTextField: UITextField = {
+    lazy var functionTextField: UITextField = {
         let field = UITextField()
         field.delegate = self
         field.font = UIFont(name: "Montserrat", size: 30)
         field.clearButtonMode = .whileEditing
+        field.clearsOnBeginEditing = false
         field.tintColor = .systemOrange
         field.translatesAutoresizingMaskIntoConstraints = false
         return field
@@ -64,6 +63,7 @@ final class CreateCompanyViewController: UIViewController {
         field.delegate = self
         field.font = UIFont(name: "Montserrat", size: 30)
         field.clearButtonMode = .whileEditing
+        field.clearsOnBeginEditing = false
         field.tintColor = .systemOrange
         field.translatesAutoresizingMaskIntoConstraints = false
         return field
@@ -105,8 +105,7 @@ final class CreateCompanyViewController: UIViewController {
     // MARK: Setup
     private func setup() {
         let viewController = self
-        let worker = CreateCompanyWorker()
-        let interactor = CreateCompanyInteractor(worker: worker)
+        let interactor = CreateCompanyInteractor()
         let router = CreateCompanyRouter()
         viewController.interactor = interactor
         viewController.router = router
@@ -118,49 +117,28 @@ final class CreateCompanyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-          NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        funtionTextField.becomeFirstResponder()
-    }
-    
-    func displaySomething(viewModel: CreateCompany.Something.ViewModel) {
-        //nameTextField.text = viewModel.name
+        functionTextField.becomeFirstResponder()
     }
     
     // MARK: - Methods
-    @objc private func passerButtonTapped() {
-        print("Passer button tapped")
+    @objc private func passBarButtonItemTapped() {
         router?.routeToAddProfileImage()
     }
     
     @objc private func goToCreateProfileImageScreen() {
-        print("next pressed")
-    }
-    
-    @objc func keyboardWillShow(_ notification: Notification) {
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            let distanceToButton = view.frame.maxY - nextButton.frame.maxY
-
-            if keyboardSize.height > distanceToButton {
-                let offsetY = keyboardSize.height - distanceToButton + 50 // Adjust this value to fine-tune the button's position
-                nextButtonBottomConstraint.constant = -offsetY
-                UIView.animate(withDuration: 0.3) {
-                    self.view.layoutIfNeeded()
-                }
-            }
+        if let enteredFunctionName = functionTextField.text {
+            interactor?.saveEnteredFunction(request: CreateCompany.FunctionField.Request(functionName: enteredFunctionName))
         }
-    }
-
-    @objc func keyboardWillHide(_ notification: Notification) {
-        nextButtonBottomConstraint.constant = -44
-        UIView.animate(withDuration: 0.3) {
-            self.view.layoutIfNeeded()
+        
+        if let enteredCompanyName = companyTextField.text {
+            interactor?.saveEnteredCompany(request: CreateCompany.CompanyField.Request(companyName: enteredCompanyName))
         }
+        
+        router?.routeToAddProfileImage()
     }
 }
 
@@ -182,26 +160,19 @@ extension CreateCompanyViewController: UITextFieldDelegate {
     }
     
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
-        nextButton.isEnabled = false
+        if let companyText = companyTextField.text, let functionText = functionTextField.text, companyText.isEmpty || functionText.isEmpty {
+            disableNextButton()
+        }
         return true
     }
     
     // MARK: - Helpers
     private func enableNextButton() {
-        nextButton.isEnabled = true
-        changeButtonColorWithFade(button: nextButton, color: .systemOrange)
+        nextButton.enableWithOrangeColor()
     }
     
     private func disableNextButton() {
-        nextButton.isEnabled = false
-        changeButtonColorWithFade(button: nextButton, color: .white)
-    }
-    
-    private func changeButtonColorWithFade(button: UIButton, color: UIColor) {
-        let animator = UIViewPropertyAnimator(duration: 0.5, curve: .linear) {
-            button.backgroundColor = color
-        }
-        animator.startAnimation()
+        nextButton.disableWithWhiteColor()
     }
 }
 
@@ -209,12 +180,12 @@ extension CreateCompanyViewController: UITextFieldDelegate {
 extension CreateCompanyViewController {
     private func setupUI() {
         title = "Professionel"
-      
+        
         view.backgroundColor = UIColor(red: 0.12, green: 0.12, blue: 0.12, alpha: 1.00)
-        let passerButton = UIBarButtonItem(title: "Passer", style: .plain, target: self, action: #selector(passerButtonTapped))
+        let passBarButtonItem = UIBarButtonItem(title: "Passer", style: .plain, target: self, action: #selector(passBarButtonItemTapped))
         
         // Set the right bar button item
-        navigationItem.rightBarButtonItem = passerButton
+        navigationItem.rightBarButtonItem = passBarButtonItem
         
         view.addSubview(indicationLabel)
         view.addSubview(jobStackView)
@@ -225,15 +196,15 @@ extension CreateCompanyViewController {
         indicationLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30).isActive = true
         indicationLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30).isActive = true
         
-       
+
         jobStackView.addArrangedSubview(jobLabel)
-        jobStackView.addArrangedSubview(funtionTextField)
+        jobStackView.addArrangedSubview(functionTextField)
         
         jobStackView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor).isActive = true
         jobStackView.topAnchor.constraint(equalTo: indicationLabel.bottomAnchor, constant: 16).isActive = true
         jobStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20).isActive = true
         jobStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20).isActive = true
-          
+        
         jobLabel.leadingAnchor.constraint(equalTo: jobStackView.leadingAnchor, constant: 8).isActive = true
         
         companyStackView.addArrangedSubview(companyLabel)
@@ -243,14 +214,12 @@ extension CreateCompanyViewController {
         companyStackView.topAnchor.constraint(equalTo: jobStackView.bottomAnchor, constant: 40).isActive = true
         companyStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20).isActive = true
         companyStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20).isActive = true
-          
+        
         companyLabel.leadingAnchor.constraint(equalTo: companyStackView.leadingAnchor, constant: 8).isActive = true
         
         nextButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20).isActive = true
         nextButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20).isActive = true
         nextButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
-        nextButtonBottomConstraint = nextButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -44)
-        nextButtonBottomConstraint.isActive = true
-       
+        nextButton.topAnchor.constraint(equalTo: companyStackView.bottomAnchor, constant: 40).isActive = true
     }
 }
