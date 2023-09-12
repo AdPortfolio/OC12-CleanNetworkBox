@@ -8,6 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		5920565F2A893C720084E9B0 /* CreateCompanyViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5920565E2A893C720084E9B0 /* CreateCompanyViewControllerTests.swift */; };
+		5945A05D2AAF435F002F7291 /* ContactsMainListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5945A0572AAF435F002F7291 /* ContactsMainListPresenter.swift */; };
+		5945A05E2AAF435F002F7291 /* ContactsMainListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5945A0582AAF435F002F7291 /* ContactsMainListWorker.swift */; };
+		5945A05F2AAF435F002F7291 /* ContactsMainListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5945A0592AAF435F002F7291 /* ContactsMainListRouter.swift */; };
+		5945A0602AAF435F002F7291 /* ContactsMainListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5945A05A2AAF435F002F7291 /* ContactsMainListModels.swift */; };
+		5945A0612AAF435F002F7291 /* ContactsMainListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5945A05B2AAF435F002F7291 /* ContactsMainListViewController.swift */; };
+		5945A0622AAF435F002F7291 /* ContactsMainListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5945A05C2AAF435F002F7291 /* ContactsMainListInteractor.swift */; };
+		5945A0652AAFB2E1002F7291 /* DataModels.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5945A0632AAFB2E1002F7291 /* DataModels.xcdatamodeld */; };
+		595365562AB0926A00137D57 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595365552AB0926A00137D57 /* CoreDataManager.swift */; };
+		5953655B2AB0A16000137D57 /* AddressMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595365572AB0A16000137D57 /* AddressMO+CoreDataClass.swift */; };
+		5953655C2AB0A16000137D57 /* AddressMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595365582AB0A16000137D57 /* AddressMO+CoreDataProperties.swift */; };
+		5953655D2AB0A16000137D57 /* ProContactMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595365592AB0A16000137D57 /* ProContactMO+CoreDataClass.swift */; };
+		5953655E2AB0A16000137D57 /* ProContactMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5953655A2AB0A16000137D57 /* ProContactMO+CoreDataProperties.swift */; };
+		595365602AB0A3DE00137D57 /* ProContactManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5953655F2AB0A3DE00137D57 /* ProContactManager.swift */; };
 		5958F6772A86FF8100CB9B17 /* Montserrat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5958F6762A86FF8100CB9B17 /* Montserrat.ttf */; };
 		5958F6802A871A9E00CB9B17 /* CreateCompanyWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5958F67A2A871A9D00CB9B17 /* CreateCompanyWorker.swift */; };
 		5958F6812A871A9E00CB9B17 /* CreateCompanyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5958F67B2A871A9D00CB9B17 /* CreateCompanyRouter.swift */; };
@@ -18,25 +31,21 @@
 		596613FF2A86CE28007FA251 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 596613FE2A86CE28007FA251 /* Assets.xcassets */; };
 		596614022A86CE28007FA251 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 596614002A86CE28007FA251 /* LaunchScreen.storyboard */; };
 		5966140D2A86CE29007FA251 /* CreateProfileViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966140C2A86CE29007FA251 /* CreateProfileViewControllerTests.swift */; };
-		5966142F2A86D281007FA251 /* CreateNameWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596614292A86D281007FA251 /* CreateNameWorker.swift */; };
 		596614302A86D281007FA251 /* CreateNameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966142A2A86D281007FA251 /* CreateNameRouter.swift */; };
 		596614312A86D281007FA251 /* CreateNameModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966142B2A86D281007FA251 /* CreateNameModels.swift */; };
 		596614322A86D281007FA251 /* CreateNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966142C2A86D281007FA251 /* CreateNameViewController.swift */; };
 		596614332A86D281007FA251 /* CreateNameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966142D2A86D281007FA251 /* CreateNameInteractor.swift */; };
-		597942E32A8A4C6E00F7DD93 /* ProContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597942E22A8A4C6E00F7DD93 /* ProContact.swift */; };
-		597942E52A8A528800F7DD93 /* ProContactWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597942E42A8A528800F7DD93 /* ProContactWorker.swift */; };
-		597942ED2A8AB6AA00F7DD93 /* AddProfileImagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597942E72A8AB6AA00F7DD93 /* AddProfileImagePresenter.swift */; };
 		597942EE2A8AB6AA00F7DD93 /* AddProfileImageWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597942E82A8AB6AA00F7DD93 /* AddProfileImageWorker.swift */; };
 		597942EF2A8AB6AA00F7DD93 /* AddProfileImageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597942E92A8AB6AA00F7DD93 /* AddProfileImageRouter.swift */; };
 		597942F02A8AB6AA00F7DD93 /* AddProfileImageModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597942EA2A8AB6AA00F7DD93 /* AddProfileImageModels.swift */; };
 		597942F12A8AB6AA00F7DD93 /* AddProfileImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597942EB2A8AB6AA00F7DD93 /* AddProfileImageViewController.swift */; };
 		597942F22A8AB6AA00F7DD93 /* AddProfileImageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597942EC2A8AB6AA00F7DD93 /* AddProfileImageInteractor.swift */; };
-		5995EAE62A8D1E8000575E0D /* CreateProfileMailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995EAE02A8D1E8000575E0D /* CreateProfileMailPresenter.swift */; };
 		5995EAE72A8D1E8000575E0D /* CreateProfileMailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995EAE12A8D1E8000575E0D /* CreateProfileMailWorker.swift */; };
 		5995EAE82A8D1E8000575E0D /* CreateProfileMailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995EAE22A8D1E8000575E0D /* CreateProfileMailRouter.swift */; };
 		5995EAE92A8D1E8000575E0D /* CreateProfileMailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995EAE32A8D1E8000575E0D /* CreateProfileMailModels.swift */; };
 		5995EAEA2A8D1E8000575E0D /* CreateProfileMailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995EAE42A8D1E8000575E0D /* CreateProfileMailViewController.swift */; };
 		5995EAEB2A8D1E8000575E0D /* CreateProfileMailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995EAE52A8D1E8000575E0D /* CreateProfileMailInteractor.swift */; };
+		59B64B4C2AA0C535009C0BB8 /* UIButton+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B64B4B2AA0C535009C0BB8 /* UIButton+State.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +60,19 @@
 
 /* Begin PBXFileReference section */
 		5920565E2A893C720084E9B0 /* CreateCompanyViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCompanyViewControllerTests.swift; sourceTree = "<group>"; };
+		5945A0572AAF435F002F7291 /* ContactsMainListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsMainListPresenter.swift; sourceTree = "<group>"; };
+		5945A0582AAF435F002F7291 /* ContactsMainListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsMainListWorker.swift; sourceTree = "<group>"; };
+		5945A0592AAF435F002F7291 /* ContactsMainListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsMainListRouter.swift; sourceTree = "<group>"; };
+		5945A05A2AAF435F002F7291 /* ContactsMainListModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsMainListModels.swift; sourceTree = "<group>"; };
+		5945A05B2AAF435F002F7291 /* ContactsMainListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsMainListViewController.swift; sourceTree = "<group>"; };
+		5945A05C2AAF435F002F7291 /* ContactsMainListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsMainListInteractor.swift; sourceTree = "<group>"; };
+		5945A0642AAFB2E1002F7291 /* ProContactMO.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProContactMO.xcdatamodel; sourceTree = "<group>"; };
+		595365552AB0926A00137D57 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		595365572AB0A16000137D57 /* AddressMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddressMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		595365582AB0A16000137D57 /* AddressMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddressMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		595365592AB0A16000137D57 /* ProContactMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProContactMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5953655A2AB0A16000137D57 /* ProContactMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProContactMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5953655F2AB0A3DE00137D57 /* ProContactManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProContactManager.swift; sourceTree = "<group>"; };
 		5958F6752A86F6A500CB9B17 /* OC12-CleanNetworkBox.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "OC12-CleanNetworkBox.xctestplan"; sourceTree = "<group>"; };
 		5958F6762A86FF8100CB9B17 /* Montserrat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Montserrat.ttf; sourceTree = SOURCE_ROOT; };
 		5958F67A2A871A9D00CB9B17 /* CreateCompanyWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCompanyWorker.swift; sourceTree = "<group>"; };
@@ -65,25 +87,21 @@
 		596614032A86CE28007FA251 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		596614082A86CE29007FA251 /* OC12-CleanNetworkBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OC12-CleanNetworkBoxTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5966140C2A86CE29007FA251 /* CreateProfileViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileViewControllerTests.swift; sourceTree = "<group>"; };
-		596614292A86D281007FA251 /* CreateNameWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNameWorker.swift; sourceTree = "<group>"; };
 		5966142A2A86D281007FA251 /* CreateNameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNameRouter.swift; sourceTree = "<group>"; };
 		5966142B2A86D281007FA251 /* CreateNameModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNameModels.swift; sourceTree = "<group>"; };
 		5966142C2A86D281007FA251 /* CreateNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNameViewController.swift; sourceTree = "<group>"; };
 		5966142D2A86D281007FA251 /* CreateNameInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNameInteractor.swift; sourceTree = "<group>"; };
-		597942E22A8A4C6E00F7DD93 /* ProContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProContact.swift; sourceTree = "<group>"; };
-		597942E42A8A528800F7DD93 /* ProContactWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProContactWorker.swift; sourceTree = "<group>"; };
-		597942E72A8AB6AA00F7DD93 /* AddProfileImagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProfileImagePresenter.swift; sourceTree = "<group>"; };
 		597942E82A8AB6AA00F7DD93 /* AddProfileImageWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProfileImageWorker.swift; sourceTree = "<group>"; };
 		597942E92A8AB6AA00F7DD93 /* AddProfileImageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProfileImageRouter.swift; sourceTree = "<group>"; };
 		597942EA2A8AB6AA00F7DD93 /* AddProfileImageModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProfileImageModels.swift; sourceTree = "<group>"; };
 		597942EB2A8AB6AA00F7DD93 /* AddProfileImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProfileImageViewController.swift; sourceTree = "<group>"; };
 		597942EC2A8AB6AA00F7DD93 /* AddProfileImageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProfileImageInteractor.swift; sourceTree = "<group>"; };
-		5995EAE02A8D1E8000575E0D /* CreateProfileMailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileMailPresenter.swift; sourceTree = "<group>"; };
 		5995EAE12A8D1E8000575E0D /* CreateProfileMailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileMailWorker.swift; sourceTree = "<group>"; };
 		5995EAE22A8D1E8000575E0D /* CreateProfileMailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileMailRouter.swift; sourceTree = "<group>"; };
 		5995EAE32A8D1E8000575E0D /* CreateProfileMailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileMailModels.swift; sourceTree = "<group>"; };
 		5995EAE42A8D1E8000575E0D /* CreateProfileMailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileMailViewController.swift; sourceTree = "<group>"; };
 		5995EAE52A8D1E8000575E0D /* CreateProfileMailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileMailInteractor.swift; sourceTree = "<group>"; };
+		59B64B4B2AA0C535009C0BB8 /* UIButton+State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+State.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,12 +130,31 @@
 			path = CreateCompany;
 			sourceTree = "<group>";
 		};
-		592056602A89ED030084E9B0 /* Workers */ = {
+		5945A0562AAF3E08002F7291 /* MainContactsList */ = {
 			isa = PBXGroup;
 			children = (
-				597942E42A8A528800F7DD93 /* ProContactWorker.swift */,
+				5945A05B2AAF435F002F7291 /* ContactsMainListViewController.swift */,
+				5945A05C2AAF435F002F7291 /* ContactsMainListInteractor.swift */,
+				5945A0572AAF435F002F7291 /* ContactsMainListPresenter.swift */,
+				5945A0592AAF435F002F7291 /* ContactsMainListRouter.swift */,
+				5945A0582AAF435F002F7291 /* ContactsMainListWorker.swift */,
+				5945A05A2AAF435F002F7291 /* ContactsMainListModels.swift */,
 			);
-			path = Workers;
+			path = MainContactsList;
+			sourceTree = "<group>";
+		};
+		595365442AB08E8400137D57 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				595365552AB0926A00137D57 /* CoreDataManager.swift */,
+				5953655F2AB0A3DE00137D57 /* ProContactManager.swift */,
+				5945A0632AAFB2E1002F7291 /* DataModels.xcdatamodeld */,
+				595365572AB0A16000137D57 /* AddressMO+CoreDataClass.swift */,
+				595365582AB0A16000137D57 /* AddressMO+CoreDataProperties.swift */,
+				595365592AB0A16000137D57 /* ProContactMO+CoreDataClass.swift */,
+				5953655A2AB0A16000137D57 /* ProContactMO+CoreDataProperties.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		5958F6782A871A6200CB9B17 /* CreateCompany */ = {
@@ -155,9 +192,9 @@
 			isa = PBXGroup;
 			children = (
 				596613F52A86CE27007FA251 /* AppDelegate.swift */,
-				597942E12A8A4C5B00F7DD93 /* Models */,
-				592056602A89ED030084E9B0 /* Workers */,
 				596614262A86CF6D007FA251 /* Scenes */,
+				59B64B4A2AA0C47B009C0BB8 /* Extensions */,
+				595365442AB08E8400137D57 /* CoreData */,
 				596613FE2A86CE28007FA251 /* Assets.xcassets */,
 				596614002A86CE28007FA251 /* LaunchScreen.storyboard */,
 				5958F6762A86FF8100CB9B17 /* Montserrat.ttf */,
@@ -181,6 +218,7 @@
 				5958F6782A871A6200CB9B17 /* CreateCompany */,
 				597942E62A8AB5A000F7DD93 /* AddProfileImage */,
 				5995EADF2A8D1E4500575E0D /* CreateProfileMail */,
+				5945A0562AAF3E08002F7291 /* MainContactsList */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -192,7 +230,6 @@
 				5966142D2A86D281007FA251 /* CreateNameInteractor.swift */,
 				5966142A2A86D281007FA251 /* CreateNameRouter.swift */,
 				5966142B2A86D281007FA251 /* CreateNameModels.swift */,
-				596614292A86D281007FA251 /* CreateNameWorker.swift */,
 			);
 			path = CreateProfile;
 			sourceTree = "<group>";
@@ -214,20 +251,11 @@
 			path = CreateName;
 			sourceTree = "<group>";
 		};
-		597942E12A8A4C5B00F7DD93 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				597942E22A8A4C6E00F7DD93 /* ProContact.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		597942E62A8AB5A000F7DD93 /* AddProfileImage */ = {
 			isa = PBXGroup;
 			children = (
 				597942EB2A8AB6AA00F7DD93 /* AddProfileImageViewController.swift */,
 				597942EC2A8AB6AA00F7DD93 /* AddProfileImageInteractor.swift */,
-				597942E72A8AB6AA00F7DD93 /* AddProfileImagePresenter.swift */,
 				597942E82A8AB6AA00F7DD93 /* AddProfileImageWorker.swift */,
 				597942E92A8AB6AA00F7DD93 /* AddProfileImageRouter.swift */,
 				597942EA2A8AB6AA00F7DD93 /* AddProfileImageModels.swift */,
@@ -239,13 +267,20 @@
 			isa = PBXGroup;
 			children = (
 				5995EAE42A8D1E8000575E0D /* CreateProfileMailViewController.swift */,
-				5995EAE02A8D1E8000575E0D /* CreateProfileMailPresenter.swift */,
+				5995EAE52A8D1E8000575E0D /* CreateProfileMailInteractor.swift */,
 				5995EAE12A8D1E8000575E0D /* CreateProfileMailWorker.swift */,
 				5995EAE22A8D1E8000575E0D /* CreateProfileMailRouter.swift */,
 				5995EAE32A8D1E8000575E0D /* CreateProfileMailModels.swift */,
-				5995EAE52A8D1E8000575E0D /* CreateProfileMailInteractor.swift */,
 			);
 			path = CreateProfileMail;
+			sourceTree = "<group>";
+		};
+		59B64B4A2AA0C47B009C0BB8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				59B64B4B2AA0C535009C0BB8 /* UIButton+State.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,29 +385,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				596614332A86D281007FA251 /* CreateNameInteractor.swift in Sources */,
+				5945A0622AAF435F002F7291 /* ContactsMainListInteractor.swift in Sources */,
 				596614312A86D281007FA251 /* CreateNameModels.swift in Sources */,
 				5958F6822A871A9E00CB9B17 /* CreateCompanyModels.swift in Sources */,
 				596613F62A86CE27007FA251 /* AppDelegate.swift in Sources */,
 				597942EF2A8AB6AA00F7DD93 /* AddProfileImageRouter.swift in Sources */,
 				5958F6812A871A9E00CB9B17 /* CreateCompanyRouter.swift in Sources */,
 				5958F6832A871A9E00CB9B17 /* CreateCompanyViewController.swift in Sources */,
+				5945A0652AAFB2E1002F7291 /* DataModels.xcdatamodeld in Sources */,
 				5995EAE72A8D1E8000575E0D /* CreateProfileMailWorker.swift in Sources */,
 				5995EAEB2A8D1E8000575E0D /* CreateProfileMailInteractor.swift in Sources */,
-				597942ED2A8AB6AA00F7DD93 /* AddProfileImagePresenter.swift in Sources */,
 				5995EAE82A8D1E8000575E0D /* CreateProfileMailRouter.swift in Sources */,
+				5945A05E2AAF435F002F7291 /* ContactsMainListWorker.swift in Sources */,
+				5953655E2AB0A16000137D57 /* ProContactMO+CoreDataProperties.swift in Sources */,
+				59B64B4C2AA0C535009C0BB8 /* UIButton+State.swift in Sources */,
 				5995EAE92A8D1E8000575E0D /* CreateProfileMailModels.swift in Sources */,
+				5953655D2AB0A16000137D57 /* ProContactMO+CoreDataClass.swift in Sources */,
+				5945A05D2AAF435F002F7291 /* ContactsMainListPresenter.swift in Sources */,
 				596614302A86D281007FA251 /* CreateNameRouter.swift in Sources */,
-				597942E52A8A528800F7DD93 /* ProContactWorker.swift in Sources */,
 				597942F12A8AB6AA00F7DD93 /* AddProfileImageViewController.swift in Sources */,
 				597942F22A8AB6AA00F7DD93 /* AddProfileImageInteractor.swift in Sources */,
 				5995EAEA2A8D1E8000575E0D /* CreateProfileMailViewController.swift in Sources */,
-				5966142F2A86D281007FA251 /* CreateNameWorker.swift in Sources */,
-				597942E32A8A4C6E00F7DD93 /* ProContact.swift in Sources */,
-				5995EAE62A8D1E8000575E0D /* CreateProfileMailPresenter.swift in Sources */,
+				5945A05F2AAF435F002F7291 /* ContactsMainListRouter.swift in Sources */,
+				5953655C2AB0A16000137D57 /* AddressMO+CoreDataProperties.swift in Sources */,
 				597942EE2A8AB6AA00F7DD93 /* AddProfileImageWorker.swift in Sources */,
 				596614322A86D281007FA251 /* CreateNameViewController.swift in Sources */,
 				5958F6802A871A9E00CB9B17 /* CreateCompanyWorker.swift in Sources */,
+				5945A0602AAF435F002F7291 /* ContactsMainListModels.swift in Sources */,
 				597942F02A8AB6AA00F7DD93 /* AddProfileImageModels.swift in Sources */,
+				5945A0612AAF435F002F7291 /* ContactsMainListViewController.swift in Sources */,
+				595365562AB0926A00137D57 /* CoreDataManager.swift in Sources */,
+				5953655B2AB0A16000137D57 /* AddressMO+CoreDataClass.swift in Sources */,
+				595365602AB0A3DE00137D57 /* ProContactManager.swift in Sources */,
 				5958F6842A871A9E00CB9B17 /* CreateCompanyInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -663,6 +707,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5945A0632AAFB2E1002F7291 /* DataModels.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5945A0642AAFB2E1002F7291 /* ProContactMO.xcdatamodel */,
+			);
+			currentVersion = 5945A0642AAFB2E1002F7291 /* ProContactMO.xcdatamodel */;
+			path = DataModels.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 596613EA2A86CE27007FA251 /* Project object */;
 }
