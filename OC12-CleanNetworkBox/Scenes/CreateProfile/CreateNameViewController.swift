@@ -7,12 +7,12 @@
 import UIKit
 
 final class CreateNameViewController: UIViewController {
+
+    // MARK: - Properties
     var interactor: CreateNameBusinessLogic?
     var router: (NSObjectProtocol & CreateNameRoutingLogic & CreateNameDataPassing)?
     
     // MARK: - UI Properties
-    private var nextButtonBottomConstraint: NSLayoutConstraint!
-    
     let indicationLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
@@ -46,6 +46,7 @@ final class CreateNameViewController: UIViewController {
         field.delegate = self
         field.font = UIFont(name: "Montserrat", size: 30)
         field.clearButtonMode = .whileEditing
+        field.clearsOnBeginEditing = false
         field.tintColor = .systemOrange
         field.translatesAutoresizingMaskIntoConstraints = false
         return field
@@ -78,13 +79,11 @@ final class CreateNameViewController: UIViewController {
     // MARK: Setup
     private func setup() {
         let viewController = self
-        let worker = CreateNameWorker()
-        let interactor = CreateNameInteractor(worker: worker)
+        let interactor = CreateNameInteractor()
         let router = CreateNameRouter()
         viewController.interactor = interactor
         viewController.router = router
         router.viewController = viewController
-        router.dataStore = interactor
     }
 
     // MARK: View lifecycle
@@ -161,24 +160,13 @@ extension CreateNameViewController: UITextFieldDelegate {
     
     // MARK: - Helpers
     private func enableNextButton() {
-        nextButton.isEnabled = true
-        changeButtonColorWithFade(button: nextButton, color: .systemOrange)
+        nextButton.enableWithOrangeColor()
     }
     
     private func disableNextButton() {
-        nextButton.isEnabled = false
-        changeButtonColorWithFade(button: nextButton, color: .white)
-    }
-    
-    // TODO: Move to UIButton Extension
-    private func changeButtonColorWithFade(button: UIButton, color: UIColor) {
-        let animator = UIViewPropertyAnimator(duration: 0.5, curve: .linear) {
-            button.backgroundColor = color
-        }
-        animator.startAnimation()
+        nextButton.disableWithWhiteColor()
     }
 }
-
 
 // MARK: - User Interface Configuration
 extension CreateNameViewController {
@@ -201,11 +189,11 @@ extension CreateNameViewController {
         stackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20).isActive = true
         stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20).isActive = true
         
+        nextButton.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 58).isActive = true
         nextButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20).isActive = true
         nextButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20).isActive = true
         nextButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
-        nextButtonBottomConstraint = nextButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -44)
-        nextButtonBottomConstraint.isActive = true
+
         nameLabel.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 8).isActive = true
     }
 }
