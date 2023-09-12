@@ -7,8 +7,8 @@
 import UIKit
 
 protocol CreateCompanyBusinessLogic {
-    func saveEnteredCompany(request: CreateCompany.Something.Request)
-    func saveEnteredFunction(request: CreateCompany.Something.Request)
+    func saveEnteredFunction(request: CreateCompany.FunctionField.Request)
+    func saveEnteredCompany(request: CreateCompany.CompanyField.Request)
 }
 
 protocol CreateCompanyDataStore{
@@ -21,18 +21,15 @@ class CreateCompanyInteractor: CreateCompanyBusinessLogic, CreateCompanyDataStor
     
     var enteredCompany: String = ""
     var enteredFunction: String = ""
-    
-    init(worker: CreateCompanyWorker) {
-        self.worker = worker
-    }
-    
-    func saveEnteredCompany(request: CreateCompany.Something.Request) {
+ 
+    func saveEnteredCompany(request: CreateCompany.CompanyField.Request) {
         enteredCompany = request.companyName
         worker?.saveCompanyNameToDataBase(companyName: request.companyName)
     }
     
-    func saveEnteredFunction(request: CreateCompany.Something.Request) {
-        
+    func saveEnteredFunction(request: CreateCompany.FunctionField.Request) {
+        enteredCompany = request.functionName
+        worker?.saveCompanyNameToDataBase(companyName: request.functionName)
     }
     
     func getEnteredCompany() -> String {
