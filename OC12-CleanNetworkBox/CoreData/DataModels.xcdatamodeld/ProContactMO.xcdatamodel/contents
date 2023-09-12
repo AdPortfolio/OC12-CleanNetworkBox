@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22G115" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AddressMO" representedClassName=".AddressMO" syncable="YES">
+        <attribute name="city" optional="YES" attributeType="String"/>
+        <attribute name="state" optional="YES" attributeType="String"/>
+        <attribute name="street1" optional="YES" attributeType="String"/>
+        <attribute name="street2" optional="YES" attributeType="String"/>
+        <attribute name="zip" optional="YES" attributeType="String"/>
+        <relationship name="proContact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ProContactMO" inverseName="companyAddress" inverseEntity="ProContactMO"/>
+    </entity>
+    <entity name="ProContactMO" representedClassName=".ProContactMO" syncable="YES">
+        <attribute name="birthday" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="companyLogo" optional="YES" attributeType="Binary"/>
+        <attribute name="companyName" optional="YES" attributeType="String"/>
+        <attribute name="dateOfCreation" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="department" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="facebook" optional="YES" attributeType="String"/>
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="function" optional="YES" attributeType="String"/>
+        <attribute name="github" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="instagram" optional="YES" attributeType="String"/>
+        <attribute name="internetLink" optional="YES" attributeType="String"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <attribute name="linkedIn" optional="YES" attributeType="String"/>
+        <attribute name="motto" optional="YES" attributeType="String"/>
+        <attribute name="paypal" optional="YES" attributeType="String"/>
+        <attribute name="phone" optional="YES" attributeType="String"/>
+        <attribute name="photo" optional="YES" attributeType="Binary"/>
+        <attribute name="skype" optional="YES" attributeType="String"/>
+        <attribute name="twitter" optional="YES" attributeType="String"/>
+        <attribute name="website" optional="YES" attributeType="String"/>
+        <attribute name="youtube" optional="YES" attributeType="String"/>
+        <relationship name="companyAddress" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AddressMO" inverseName="proContact" inverseEntity="AddressMO"/>
+    </entity>
+</model>
