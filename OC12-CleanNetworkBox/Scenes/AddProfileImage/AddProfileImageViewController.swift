@@ -11,8 +11,22 @@ final class AddProfileImageViewController: UIViewController {
     var router: (NSObjectProtocol & AddProfileImageRoutingLogic & AddProfileImageDataPassing)?
     
     // MARK: - UI Properties
+    
+    let indicationLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        label.textColor = .white
+        label.font = UIFont(name: "Montserrat", size: 20)
+        label.text = "Sélectionnons votre image de profil"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     let imageView: UIImageView = {
         let view = UIImageView()
+        view.contentMode = .scaleAspectFill
+        view.clipsToBounds = true
         view.backgroundColor = .yellow
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -56,8 +70,12 @@ final class AddProfileImageViewController: UIViewController {
         setupUI()
     }
     
-    func displayPicture(viewModel: AddProfileImage.Picture.ViewModel) {
-        
+    func displayImage(viewModel: AddProfileImage.Picture.ViewModel) {
+    }
+    
+    // MARK: - Methods
+    @objc private func passerButtonTapped() {
+        router?.routeToCreateProfileMail()
     }
 }
 
@@ -72,7 +90,6 @@ extension AddProfileImageViewController: UIImagePickerControllerDelegate, UINavi
         present(imagePicker, animated: true, completion: nil)
     }
     
-    // UIImagePickerControllerDelegate method to handle the selected image
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             imageView.image = pickedImage
@@ -87,12 +104,20 @@ extension AddProfileImageViewController: UIImagePickerControllerDelegate, UINavi
 extension AddProfileImageViewController {
     private func setupUI() {
         title = "Photo"
+        
+        let passerButton = UIBarButtonItem(title: "Passer", style: .plain, target: self, action: #selector(passerButtonTapped))
+        navigationItem.rightBarButtonItem = passerButton
         view.backgroundColor = UIColor(red: 0.12, green: 0.12, blue: 0.12, alpha: 1.00)
-
+        
+        view.addSubview(indicationLabel)
         view.addSubview(imageView)
         view.addSubview(addButton)
         
-        imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        indicationLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50).isActive = true
+        indicationLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30).isActive = true
+        indicationLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30).isActive = true
+        
+        imageView.topAnchor.constraint(equalTo: indicationLabel.bottomAnchor, constant: 16).isActive = true
         imageView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 40).isActive = true
         imageView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -40).isActive = true
         imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor, multiplier: 1).isActive = true
