@@ -20,15 +20,24 @@ final class CreateNameRouter: NSObject, CreateNameRoutingLogic, CreateNameDataPa
     weak var viewController: CreateNameViewController?
     var dataStore: CreateNameDataStore?
     
-    // MARK: Routing
+    // MARK: - Routing
     func routeToCreateCompany() {
         let destinationVC = CreateCompanyViewController()
+       
         guard let viewController = viewController else { return }
+        guard var destinationDS = destinationVC.router?.dataStore else { return }
+        
         navigateToCreateCompany(source: viewController, destination: destinationVC)
+        passDataToCreateCompany(source: dataStore!, destination: &destinationDS)
     }
     
-    // MARK: Navigation
+    // MARK: - Navigation
     func navigateToCreateCompany(source: CreateNameViewController, destination: CreateCompanyViewController) {
         source.navigationController?.show(destination, sender: nil)
+    }
+    
+    // MARK: - Data Passing
+    func passDataToCreateCompany(source: CreateNameDataStore, destination: inout CreateCompanyDataStore) {
+        destination.profile = source.profile
     }
 }
