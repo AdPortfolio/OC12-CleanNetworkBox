@@ -8,15 +8,10 @@
 import UIKit
 
 enum AddProfileImage {
-  // MARK: Use cases
-  
-  enum Picture {
-    struct Request {
-        var image: UIImage
+    
+    enum Image {
+        struct Request {
+            var image: UIImage?
+        }
     }
-    struct Response {
-    }
-    struct ViewModel {
-    }
-  }
 }
