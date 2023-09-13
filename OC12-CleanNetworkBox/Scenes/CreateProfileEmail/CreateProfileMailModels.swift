@@ -12,16 +12,11 @@
 
 import UIKit
 
-enum CreateProfileMail
-{
-  // MARK: Use cases
-  
-  enum Something {
-    struct Request {
+enum CreateProfileEmail {
+    
+    enum Email {
+        struct Request {
+            var email: String?
+        }
     }
-    struct Response {
-    }
-    struct ViewModel {
-    }
-  }
 }
