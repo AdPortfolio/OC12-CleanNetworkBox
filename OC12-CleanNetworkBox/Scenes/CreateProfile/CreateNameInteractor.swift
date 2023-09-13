@@ -11,27 +11,19 @@ protocol CreateNameBusinessLogic {
 }
 
 protocol CreateNameDataStore {
-    var profile: ProContactMO? { get set }
+    var profile: ProContact? { get }
 }
 
 final class CreateNameInteractor: CreateNameBusinessLogic, CreateNameDataStore {
     
-    var profile: ProContactMO?
-    private var proContactManager: ProContactRepository
-    
-    // MARK: - Initialization
-    init(proContactManager: ProContactRepository = ProContactManager()) {
-        self.proContactManager = proContactManager
-    }
-    
+    // MARK: - Properties
+    var profile: ProContact?
+  
     // MARK: - Methods
     func addEnteredName(request: CreateName.AddName.Request) {
-        guard let profile = profile, let firstName = request.firstName else { return }
+        let profile = ProContact()
+        guard let firstName = request.firstName else { return }
         profile.firstName = firstName
         self.profile = profile
-    }
-    
-    func getEnteredName() -> ProContact? {
-        return profile
     }
 }
