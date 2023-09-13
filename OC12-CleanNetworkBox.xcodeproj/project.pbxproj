@@ -15,6 +15,8 @@
 		5945A0612AAF435F002F7291 /* ContactsMainListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5945A05B2AAF435F002F7291 /* ContactsMainListViewController.swift */; };
 		5945A0622AAF435F002F7291 /* ContactsMainListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5945A05C2AAF435F002F7291 /* ContactsMainListInteractor.swift */; };
 		5945A0652AAFB2E1002F7291 /* DataModels.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5945A0632AAFB2E1002F7291 /* DataModels.xcdatamodeld */; };
+		594B68162AB20331000E05BA /* ProContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594B68152AB20331000E05BA /* ProContact.swift */; };
+		594B68182AB20338000E05BA /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594B68172AB20338000E05BA /* Address.swift */; };
 		595365562AB0926A00137D57 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595365552AB0926A00137D57 /* CoreDataManager.swift */; };
 		5953655B2AB0A16000137D57 /* AddressMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595365572AB0A16000137D57 /* AddressMO+CoreDataClass.swift */; };
 		5953655C2AB0A16000137D57 /* AddressMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595365582AB0A16000137D57 /* AddressMO+CoreDataProperties.swift */; };
@@ -22,7 +24,6 @@
 		5953655E2AB0A16000137D57 /* ProContactMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5953655A2AB0A16000137D57 /* ProContactMO+CoreDataProperties.swift */; };
 		595365602AB0A3DE00137D57 /* ProContactManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5953655F2AB0A3DE00137D57 /* ProContactManager.swift */; };
 		5958F6772A86FF8100CB9B17 /* Montserrat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5958F6762A86FF8100CB9B17 /* Montserrat.ttf */; };
-		5958F6802A871A9E00CB9B17 /* CreateCompanyWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5958F67A2A871A9D00CB9B17 /* CreateCompanyWorker.swift */; };
 		5958F6812A871A9E00CB9B17 /* CreateCompanyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5958F67B2A871A9D00CB9B17 /* CreateCompanyRouter.swift */; };
 		5958F6822A871A9E00CB9B17 /* CreateCompanyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5958F67C2A871A9D00CB9B17 /* CreateCompanyModels.swift */; };
 		5958F6832A871A9E00CB9B17 /* CreateCompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5958F67D2A871A9D00CB9B17 /* CreateCompanyViewController.swift */; };
@@ -35,12 +36,10 @@
 		596614312A86D281007FA251 /* CreateNameModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966142B2A86D281007FA251 /* CreateNameModels.swift */; };
 		596614322A86D281007FA251 /* CreateNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966142C2A86D281007FA251 /* CreateNameViewController.swift */; };
 		596614332A86D281007FA251 /* CreateNameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966142D2A86D281007FA251 /* CreateNameInteractor.swift */; };
-		597942EE2A8AB6AA00F7DD93 /* AddProfileImageWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597942E82A8AB6AA00F7DD93 /* AddProfileImageWorker.swift */; };
 		597942EF2A8AB6AA00F7DD93 /* AddProfileImageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597942E92A8AB6AA00F7DD93 /* AddProfileImageRouter.swift */; };
 		597942F02A8AB6AA00F7DD93 /* AddProfileImageModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597942EA2A8AB6AA00F7DD93 /* AddProfileImageModels.swift */; };
 		597942F12A8AB6AA00F7DD93 /* AddProfileImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597942EB2A8AB6AA00F7DD93 /* AddProfileImageViewController.swift */; };
 		597942F22A8AB6AA00F7DD93 /* AddProfileImageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597942EC2A8AB6AA00F7DD93 /* AddProfileImageInteractor.swift */; };
-		5995EAE72A8D1E8000575E0D /* CreateProfileMailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995EAE12A8D1E8000575E0D /* CreateProfileMailWorker.swift */; };
 		5995EAE82A8D1E8000575E0D /* CreateProfileMailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995EAE22A8D1E8000575E0D /* CreateProfileMailRouter.swift */; };
 		5995EAE92A8D1E8000575E0D /* CreateProfileMailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995EAE32A8D1E8000575E0D /* CreateProfileMailModels.swift */; };
 		5995EAEA2A8D1E8000575E0D /* CreateProfileMailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995EAE42A8D1E8000575E0D /* CreateProfileMailViewController.swift */; };
@@ -67,6 +66,8 @@
 		5945A05B2AAF435F002F7291 /* ContactsMainListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsMainListViewController.swift; sourceTree = "<group>"; };
 		5945A05C2AAF435F002F7291 /* ContactsMainListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsMainListInteractor.swift; sourceTree = "<group>"; };
 		5945A0642AAFB2E1002F7291 /* ProContactMO.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProContactMO.xcdatamodel; sourceTree = "<group>"; };
+		594B68152AB20331000E05BA /* ProContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProContact.swift; sourceTree = "<group>"; };
+		594B68172AB20338000E05BA /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		595365552AB0926A00137D57 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		595365572AB0A16000137D57 /* AddressMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddressMO+CoreDataClass.swift"; sourceTree = "<group>"; };
 		595365582AB0A16000137D57 /* AddressMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddressMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -75,7 +76,6 @@
 		5953655F2AB0A3DE00137D57 /* ProContactManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProContactManager.swift; sourceTree = "<group>"; };
 		5958F6752A86F6A500CB9B17 /* OC12-CleanNetworkBox.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "OC12-CleanNetworkBox.xctestplan"; sourceTree = "<group>"; };
 		5958F6762A86FF8100CB9B17 /* Montserrat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Montserrat.ttf; sourceTree = SOURCE_ROOT; };
-		5958F67A2A871A9D00CB9B17 /* CreateCompanyWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCompanyWorker.swift; sourceTree = "<group>"; };
 		5958F67B2A871A9D00CB9B17 /* CreateCompanyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCompanyRouter.swift; sourceTree = "<group>"; };
 		5958F67C2A871A9D00CB9B17 /* CreateCompanyModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCompanyModels.swift; sourceTree = "<group>"; };
 		5958F67D2A871A9D00CB9B17 /* CreateCompanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCompanyViewController.swift; sourceTree = "<group>"; };
@@ -91,12 +91,10 @@
 		5966142B2A86D281007FA251 /* CreateNameModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNameModels.swift; sourceTree = "<group>"; };
 		5966142C2A86D281007FA251 /* CreateNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNameViewController.swift; sourceTree = "<group>"; };
 		5966142D2A86D281007FA251 /* CreateNameInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNameInteractor.swift; sourceTree = "<group>"; };
-		597942E82A8AB6AA00F7DD93 /* AddProfileImageWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProfileImageWorker.swift; sourceTree = "<group>"; };
 		597942E92A8AB6AA00F7DD93 /* AddProfileImageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProfileImageRouter.swift; sourceTree = "<group>"; };
 		597942EA2A8AB6AA00F7DD93 /* AddProfileImageModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProfileImageModels.swift; sourceTree = "<group>"; };
 		597942EB2A8AB6AA00F7DD93 /* AddProfileImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProfileImageViewController.swift; sourceTree = "<group>"; };
 		597942EC2A8AB6AA00F7DD93 /* AddProfileImageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProfileImageInteractor.swift; sourceTree = "<group>"; };
-		5995EAE12A8D1E8000575E0D /* CreateProfileMailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileMailWorker.swift; sourceTree = "<group>"; };
 		5995EAE22A8D1E8000575E0D /* CreateProfileMailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileMailRouter.swift; sourceTree = "<group>"; };
 		5995EAE32A8D1E8000575E0D /* CreateProfileMailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileMailModels.swift; sourceTree = "<group>"; };
 		5995EAE42A8D1E8000575E0D /* CreateProfileMailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileMailViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +141,15 @@
 			path = MainContactsList;
 			sourceTree = "<group>";
 		};
+		594B68142AB20324000E05BA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				594B68152AB20331000E05BA /* ProContact.swift */,
+				594B68172AB20338000E05BA /* Address.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		595365442AB08E8400137D57 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,7 +171,6 @@
 				5958F67E2A871A9D00CB9B17 /* CreateCompanyInteractor.swift */,
 				5958F67B2A871A9D00CB9B17 /* CreateCompanyRouter.swift */,
 				5958F67C2A871A9D00CB9B17 /* CreateCompanyModels.swift */,
-				5958F67A2A871A9D00CB9B17 /* CreateCompanyWorker.swift */,
 			);
 			path = CreateCompany;
 			sourceTree = "<group>";
@@ -192,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				596613F52A86CE27007FA251 /* AppDelegate.swift */,
+				594B68142AB20324000E05BA /* Models */,
 				596614262A86CF6D007FA251 /* Scenes */,
 				59B64B4A2AA0C47B009C0BB8 /* Extensions */,
 				595365442AB08E8400137D57 /* CoreData */,
@@ -217,7 +224,7 @@
 				596614272A86CF92007FA251 /* CreateProfile */,
 				5958F6782A871A6200CB9B17 /* CreateCompany */,
 				597942E62A8AB5A000F7DD93 /* AddProfileImage */,
-				5995EADF2A8D1E4500575E0D /* CreateProfileMail */,
+				5995EADF2A8D1E4500575E0D /* CreateProfileEmail */,
 				5945A0562AAF3E08002F7291 /* MainContactsList */,
 			);
 			path = Scenes;
@@ -256,23 +263,21 @@
 			children = (
 				597942EB2A8AB6AA00F7DD93 /* AddProfileImageViewController.swift */,
 				597942EC2A8AB6AA00F7DD93 /* AddProfileImageInteractor.swift */,
-				597942E82A8AB6AA00F7DD93 /* AddProfileImageWorker.swift */,
 				597942E92A8AB6AA00F7DD93 /* AddProfileImageRouter.swift */,
 				597942EA2A8AB6AA00F7DD93 /* AddProfileImageModels.swift */,
 			);
 			path = AddProfileImage;
 			sourceTree = "<group>";
 		};
-		5995EADF2A8D1E4500575E0D /* CreateProfileMail */ = {
+		5995EADF2A8D1E4500575E0D /* CreateProfileEmail */ = {
 			isa = PBXGroup;
 			children = (
 				5995EAE42A8D1E8000575E0D /* CreateProfileMailViewController.swift */,
 				5995EAE52A8D1E8000575E0D /* CreateProfileMailInteractor.swift */,
-				5995EAE12A8D1E8000575E0D /* CreateProfileMailWorker.swift */,
 				5995EAE22A8D1E8000575E0D /* CreateProfileMailRouter.swift */,
 				5995EAE32A8D1E8000575E0D /* CreateProfileMailModels.swift */,
 			);
-			path = CreateProfileMail;
+			path = CreateProfileEmail;
 			sourceTree = "<group>";
 		};
 		59B64B4A2AA0C47B009C0BB8 /* Extensions */ = {
@@ -393,7 +398,6 @@
 				5958F6812A871A9E00CB9B17 /* CreateCompanyRouter.swift in Sources */,
 				5958F6832A871A9E00CB9B17 /* CreateCompanyViewController.swift in Sources */,
 				5945A0652AAFB2E1002F7291 /* DataModels.xcdatamodeld in Sources */,
-				5995EAE72A8D1E8000575E0D /* CreateProfileMailWorker.swift in Sources */,
 				5995EAEB2A8D1E8000575E0D /* CreateProfileMailInteractor.swift in Sources */,
 				5995EAE82A8D1E8000575E0D /* CreateProfileMailRouter.swift in Sources */,
 				5945A05E2AAF435F002F7291 /* ContactsMainListWorker.swift in Sources */,
@@ -402,20 +406,20 @@
 				5995EAE92A8D1E8000575E0D /* CreateProfileMailModels.swift in Sources */,
 				5953655D2AB0A16000137D57 /* ProContactMO+CoreDataClass.swift in Sources */,
 				5945A05D2AAF435F002F7291 /* ContactsMainListPresenter.swift in Sources */,
+				594B68182AB20338000E05BA /* Address.swift in Sources */,
 				596614302A86D281007FA251 /* CreateNameRouter.swift in Sources */,
 				597942F12A8AB6AA00F7DD93 /* AddProfileImageViewController.swift in Sources */,
 				597942F22A8AB6AA00F7DD93 /* AddProfileImageInteractor.swift in Sources */,
 				5995EAEA2A8D1E8000575E0D /* CreateProfileMailViewController.swift in Sources */,
 				5945A05F2AAF435F002F7291 /* ContactsMainListRouter.swift in Sources */,
 				5953655C2AB0A16000137D57 /* AddressMO+CoreDataProperties.swift in Sources */,
-				597942EE2A8AB6AA00F7DD93 /* AddProfileImageWorker.swift in Sources */,
 				596614322A86D281007FA251 /* CreateNameViewController.swift in Sources */,
-				5958F6802A871A9E00CB9B17 /* CreateCompanyWorker.swift in Sources */,
 				5945A0602AAF435F002F7291 /* ContactsMainListModels.swift in Sources */,
 				597942F02A8AB6AA00F7DD93 /* AddProfileImageModels.swift in Sources */,
 				5945A0612AAF435F002F7291 /* ContactsMainListViewController.swift in Sources */,
 				595365562AB0926A00137D57 /* CoreDataManager.swift in Sources */,
 				5953655B2AB0A16000137D57 /* AddressMO+CoreDataClass.swift in Sources */,
+				594B68162AB20331000E05BA /* ProContact.swift in Sources */,
 				595365602AB0A3DE00137D57 /* ProContactManager.swift in Sources */,
 				5958F6842A871A9E00CB9B17 /* CreateCompanyInteractor.swift in Sources */,
 			);
