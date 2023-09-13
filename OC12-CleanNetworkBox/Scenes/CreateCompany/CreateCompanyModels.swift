@@ -9,19 +9,19 @@ import UIKit
 enum CreateCompany {
     
     struct OrderFormFields {
-        var companyName: String
-        var functionName: String
+        var companyName: String?
+        var functionName: String?
     }
     
     enum CompanyField {
         struct Request {
-            var companyName: String
+            var companyName: String?
         }
     }
     
     enum FunctionField {
         struct Request {
-            var functionName: String
+            var functionName: String?
         }
     }
 }
