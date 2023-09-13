@@ -8,24 +8,23 @@
 import UIKit
 
 protocol AddProfileImageBusinessLogic {
-    func processSelectedImage(request: AddProfileImage.Picture.Request)
+    func addSelectedImage(request: AddProfileImage.Image.Request)
 }
 
 protocol AddProfileImageDataStore {
-    //var name: String { get set }
+    var profile: ProContact? { get set }
 }
 
 class AddProfileImageInteractor: AddProfileImageBusinessLogic, AddProfileImageDataStore {
-    var presenter: AddProfileImagePresentationLogic?
-    var worker: AddProfileImageWorker?
     
-    // MARK: Do something
-    
-    func processSelectedImage(request: AddProfileImage.Picture.Request) {
-        worker = AddProfileImageWorker()
-        worker?.doSomeWork()
-        
-        let response = AddProfileImage.Picture.Response()
-        presenter?.presentSomething(response: response)
+    // MARK: - Properties
+    var profile: ProContact?
+
+    // MARK: - Methods
+    func addSelectedImage(request: AddProfileImage.Image.Request) {
+        let profile = ProContact()
+        guard let image = request.image else { return }
+        profile.photo = image
+        self.profile = profile
     }
 }
