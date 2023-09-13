@@ -4,10 +4,10 @@
 //
 //  Created by Walim Aloui on 11/08/2023.
 
-import UIKit
+import Foundation
 
 protocol CreateNameBusinessLogic {
-    func saveEnteredName(request: AddName.AddName.Request)
+    func addEnteredName(request: CreateName.AddName.Request)
 }
 
 protocol CreateNameDataStore {
@@ -25,12 +25,13 @@ final class CreateNameInteractor: CreateNameBusinessLogic, CreateNameDataStore {
     }
     
     // MARK: - Methods
-    func saveEnteredName(request: CreateName.CreateName.Request) {
-        enteredName = request.firstName
-        worker?.saveNameToDatabase(firstName: request.firstName)
+    func addEnteredName(request: CreateName.AddName.Request) {
+        guard let profile = profile, let firstName = request.firstName else { return }
+        profile.firstName = firstName
+        self.profile = profile
     }
     
-    func getEnteredName() -> ProContactMO? {
+    func getEnteredName() -> ProContact? {
         return profile
     }
 }

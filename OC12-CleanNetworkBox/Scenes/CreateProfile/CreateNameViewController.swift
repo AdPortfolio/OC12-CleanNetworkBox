@@ -55,7 +55,7 @@ final class CreateNameViewController: UIViewController {
     lazy var nextButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("SUIVANT", for: .normal)
-        button.addTarget(self, action: #selector(goToCreateCompanyScreen), for: .touchUpInside)
+        button.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
         button.backgroundColor = .white
         button.tintColor = .darkGray
         button.layer.cornerRadius = 10
@@ -98,9 +98,9 @@ final class CreateNameViewController: UIViewController {
     }
     
     // MARK: - Methods
-    @objc private func goToCreateCompanyScreen() {
+    @objc private func nextButtonTapped() {
         let enteredName = textField.text ?? ""
-        interactor?.saveEnteredName(request: AddName.AddName.Request(firstName: enteredName))
+        interactor?.addEnteredName(request: CreateName.AddName.Request(firstName: enteredName))
         routeToCreateCompany()
     }
     
@@ -110,7 +110,7 @@ final class CreateNameViewController: UIViewController {
     }
 }
 
-// MARK: - Text Field Delegate {
+// MARK: - Text Field Delegate
 extension CreateNameViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
