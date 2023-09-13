@@ -81,7 +81,7 @@ final class CreateCompanyViewController: UIViewController {
     lazy var nextButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("SUIVANT", for: .normal)
-        button.addTarget(self, action: #selector(goToCreateProfileImageScreen), for: .touchUpInside)
+        button.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
         button.backgroundColor = .white
         button.tintColor = .darkGray
         button.layer.cornerRadius = 10
@@ -91,7 +91,7 @@ final class CreateCompanyViewController: UIViewController {
         return button
     }()
     
-    // MARK: Object Lifecycle
+    // MARK: - Initialization
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
@@ -102,7 +102,7 @@ final class CreateCompanyViewController: UIViewController {
         setup()
     }
     
-    // MARK: Setup
+    // MARK: - Setup
     private func setup() {
         let viewController = self
         let interactor = CreateCompanyInteractor()
@@ -113,7 +113,7 @@ final class CreateCompanyViewController: UIViewController {
         router.dataStore = interactor
     }
     
-    // MARK: View lifecycle
+    // MARK: - View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -125,17 +125,17 @@ final class CreateCompanyViewController: UIViewController {
     }
     
     // MARK: - Methods
-    @objc private func passBarButtonItemTapped() {
+    @objc private func skipBarButtonItemTapped() {
         router?.routeToAddProfileImage()
     }
     
-    @objc private func goToCreateProfileImageScreen() {
+    @objc private func nextButtonTapped() {
         if let enteredFunctionName = functionTextField.text {
-            interactor?.saveEnteredFunction(request: CreateCompany.FunctionField.Request(functionName: enteredFunctionName))
+            interactor?.addEnteredFunction(request: CreateCompany.FunctionField.Request(functionName: enteredFunctionName))
         }
         
         if let enteredCompanyName = companyTextField.text {
-            interactor?.saveEnteredCompany(request: CreateCompany.CompanyField.Request(companyName: enteredCompanyName))
+            interactor?.addEnteredCompany(request: CreateCompany.CompanyField.Request(companyName: enteredCompanyName))
         }
         
         router?.routeToAddProfileImage()
@@ -182,9 +182,8 @@ extension CreateCompanyViewController {
         title = "Professionel"
         
         view.backgroundColor = UIColor(red: 0.12, green: 0.12, blue: 0.12, alpha: 1.00)
-        let passBarButtonItem = UIBarButtonItem(title: "Passer", style: .plain, target: self, action: #selector(passBarButtonItemTapped))
+        let passBarButtonItem = UIBarButtonItem(title: "Passer", style: .plain, target: self, action: #selector(skipBarButtonItemTapped))
         
-        // Set the right bar button item
         navigationItem.rightBarButtonItem = passBarButtonItem
         
         view.addSubview(indicationLabel)
@@ -196,7 +195,6 @@ extension CreateCompanyViewController {
         indicationLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30).isActive = true
         indicationLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30).isActive = true
         
-
         jobStackView.addArrangedSubview(jobLabel)
         jobStackView.addArrangedSubview(functionTextField)
         
