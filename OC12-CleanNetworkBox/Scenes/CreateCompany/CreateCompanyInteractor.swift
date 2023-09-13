@@ -7,36 +7,31 @@
 import UIKit
 
 protocol CreateCompanyBusinessLogic {
-    func saveEnteredFunction(request: CreateCompany.FunctionField.Request)
-    func saveEnteredCompany(request: CreateCompany.CompanyField.Request)
+    func addEnteredCompany(request: CreateCompany.CompanyField.Request)
+    func addEnteredFunction(request: CreateCompany.FunctionField.Request)
 }
 
-protocol CreateCompanyDataStore{
-    var enteredCompany: String { get set }
-    var enteredFunction: String { get set }
+protocol CreateCompanyDataStore {
+    var profile: ProContact? { get set }
 }
 
-class CreateCompanyInteractor: CreateCompanyBusinessLogic, CreateCompanyDataStore {
-    var worker: CreateCompanyWorker?
+final class CreateCompanyInteractor: CreateCompanyBusinessLogic, CreateCompanyDataStore {
     
-    var enteredCompany: String = ""
-    var enteredFunction: String = ""
+    // MARK: - Properties
+    var profile: ProContact?
  
-    func saveEnteredCompany(request: CreateCompany.CompanyField.Request) {
-        enteredCompany = request.companyName
-        worker?.saveCompanyNameToDataBase(companyName: request.companyName)
+    // MARK: - Methods
+    func addEnteredCompany(request: CreateCompany.CompanyField.Request) {
+        guard let profile = profile else { return }
+        let companyName = request.companyName
+        profile.companyName = companyName
+        self.profile = profile
     }
     
-    func saveEnteredFunction(request: CreateCompany.FunctionField.Request) {
-        enteredCompany = request.functionName
-        worker?.saveCompanyNameToDataBase(companyName: request.functionName)
-    }
-    
-    func getEnteredCompany() -> String {
-        return enteredCompany
-    }
-    
-    func getEnteredFunction() -> String {
-        return enteredFunction
+    func addEnteredFunction(request: CreateCompany.FunctionField.Request) {
+        guard let profile = profile else { return }
+        let functionName = request.functionName
+        profile.function = functionName
+        self.profile = profile
     }
 }
