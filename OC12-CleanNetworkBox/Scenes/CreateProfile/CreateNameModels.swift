@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum AddName {
+enum CreateName {
     // MARK: Use cases
     enum AddName {
         struct Request{
