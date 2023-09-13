@@ -11,7 +11,6 @@ final class AddProfileImageViewController: UIViewController {
     var router: (NSObjectProtocol & AddProfileImageRoutingLogic & AddProfileImageDataPassing)?
     
     // MARK: - UI Properties
-    
     let indicationLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
@@ -41,7 +40,20 @@ final class AddProfileImageViewController: UIViewController {
         return button
     }()
     
-    // MARK: Object lifecycle
+    lazy var nextButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("SUIVANT", for: .normal)
+        button.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
+        button.backgroundColor = .white
+        button.tintColor = .darkGray
+        button.layer.cornerRadius = 10
+        button.isEnabled = false
+        button.titleLabel?.font = UIFont(name: "Montserrat", size: 25)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    // MARK: - Initialization
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
@@ -52,8 +64,7 @@ final class AddProfileImageViewController: UIViewController {
         setup()
     }
     
-    // MARK: Setup
-    
+    // MARK: - Setup
     private func setup() {
         let viewController = self
         let interactor = AddProfileImageInteractor()
@@ -64,18 +75,40 @@ final class AddProfileImageViewController: UIViewController {
         router.dataStore = interactor
     }
     
-    // MARK: View lifecycle
+    // MARK: - View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
     
-    func displayImage(viewModel: AddProfileImage.Picture.ViewModel) {
+    // MARK: - Methods
+    @objc private func skipBarButtonItemTapped() {
+        router?.routeToCreateProfileMail()
     }
     
-    // MARK: - Methods
-    @objc private func passerButtonTapped() {
-        router?.routeToCreateProfileMail()
+    @objc private func nextButtonTapped() {
+        let selectedImage = imageView.image
+       
+            interactor?.addSelectedImage(request: AddProfileImage.Image.Request(image: selectedImage))
+            router?.routeToCreateProfileMail()
+    }
+    
+    // MARK: - Helpers
+    private func enableNextButton() {
+        nextButton.enableWithOrangeColor()
+    }
+    
+    private func disableNextButton() {
+        nextButton.disableWithWhiteColor()
+    }
+    
+    private func checkImagePresence() {
+        let selectedImage = imageView.image
+        if selectedImage != nil {
+            enableNextButton()
+        } else {
+            disableNextButton()
+        }
     }
 }
 
@@ -86,16 +119,16 @@ extension AddProfileImageViewController: UIImagePickerControllerDelegate, UINavi
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = .photoLibrary
-        print("Hey")
         present(imagePicker, animated: true, completion: nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             imageView.image = pickedImage
-            let request = AddProfileImage.Picture.Request(image: pickedImage)
-            interactor?.processSelectedImage(request: request)
+            let request = AddProfileImage.Image.Request(image: pickedImage)
+            interactor?.addSelectedImage(request: request)
         }
+        checkImagePresence()
         picker.dismiss(animated: true, completion: nil)
     }
 }
@@ -105,13 +138,14 @@ extension AddProfileImageViewController {
     private func setupUI() {
         title = "Photo"
         
-        let passerButton = UIBarButtonItem(title: "Passer", style: .plain, target: self, action: #selector(passerButtonTapped))
+        let passerButton = UIBarButtonItem(title: "Passer", style: .plain, target: self, action: #selector(skipBarButtonItemTapped))
         navigationItem.rightBarButtonItem = passerButton
         view.backgroundColor = UIColor(red: 0.12, green: 0.12, blue: 0.12, alpha: 1.00)
         
         view.addSubview(indicationLabel)
         view.addSubview(imageView)
         view.addSubview(addButton)
+        view.addSubview(nextButton)
         
         indicationLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50).isActive = true
         indicationLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30).isActive = true
@@ -124,5 +158,10 @@ extension AddProfileImageViewController {
         
         addButton.topAnchor.constraint(equalTo: imageView.topAnchor, constant: 16).isActive = true
         addButton.trailingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: -16).isActive = true
+        
+        nextButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20).isActive = true
+        nextButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20).isActive = true
+        nextButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        nextButton.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 40).isActive = true
     }
 }
