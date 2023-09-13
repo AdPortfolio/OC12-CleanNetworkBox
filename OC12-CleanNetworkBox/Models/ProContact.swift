@@ -5,7 +5,7 @@
 //  Created by Walim Aloui on 13/09/2023.
 //
 
-import Foundation
+import UIKit
 
 class ProContact {
     var birthday: Date?
@@ -26,7 +26,7 @@ class ProContact {
     var motto: String?
     var paypal: String?
     var phone: String?
-    var photo: Data?
+    var photo: UIImage?
     var skype: String?
     var twitter: String?
     var website: String?
