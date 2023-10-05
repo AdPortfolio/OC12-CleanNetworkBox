@@ -30,7 +30,11 @@ final class CreateProfileMailRouter: NSObject, CreateProfileMailRoutingLogic, Cr
     
     // MARK: - Navigation
     func navigateToContactsMainList(source: CreateProfileMailViewController, destination: ContactsMainListViewController) {
-        source.show(destination, sender: nil)
+        // Create a new navigation controller with ContactsMainListViewController as its root
+        let newNavigationController = UINavigationController(rootViewController: destination)
+        
+        // Present the new navigation controller modally
+        source.show(newNavigationController, sender: nil)
     }
     
     // MARK: - Data Passing

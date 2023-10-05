@@ -1,21 +1,22 @@
 //
-//  ContactsMainListViewController.swift
+//  UserProfileSummaryViewController.swift
 //  OC12-CleanNetworkBox
 //
-//  Created by Walim Aloui on 11/09/2023.
+//  Created by Walim Aloui on 23/09/2023.
 //  Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
 
 import UIKit
 
-protocol ContactsMainListDisplayLogic: AnyObject {
-    func displaySomething(viewModel: ContactsMainList.Something.ViewModel)
+protocol UserProfileSummaryDisplayLogic: AnyObject {
+    func displaySomething(viewModel: UserProfileSummary.Something.ViewModel)
 }
 
-final class ContactsMainListViewController: UIViewController, ContactsMainListDisplayLogic {
-    var interactor: ContactsMainListBusinessLogic?
-    var router: (NSObjectProtocol & ContactsMainListRoutingLogic & ContactsMainListDataPassing)?
+final class UserProfileSummaryViewController: UIViewController, UserProfileSummaryDisplayLogic {
+    var interactor: UserProfileSummaryBusinessLogic?
+    var router: (NSObjectProtocol & UserProfileSummaryRoutingLogic & UserProfileSummaryDataPassing)?
     
     // MARK: - Object lifecycle
+    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
@@ -30,9 +31,9 @@ final class ContactsMainListViewController: UIViewController, ContactsMainListDi
     
     private func setup() {
         let viewController = self
-        let interactor = ContactsMainListInteractor()
-        let presenter = ContactsMainListPresenter()
-        let router = ContactsMainListRouter()
+        let interactor = UserProfileSummaryInteractor()
+        let presenter = UserProfileSummaryPresenter()
+        let router = UserProfileSummaryRouter()
         viewController.interactor = interactor
         viewController.router = router
         interactor.presenter = presenter
@@ -53,6 +54,7 @@ final class ContactsMainListViewController: UIViewController, ContactsMainListDi
     }
     
     // MARK: - View lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         doSomething()
@@ -63,11 +65,11 @@ final class ContactsMainListViewController: UIViewController, ContactsMainListDi
     //@IBOutlet weak var nameTextField: UITextField!
     
     func doSomething() {
-        let request = ContactsMainList.Something.Request()
+        let request = UserProfileSummary.Something.Request()
         interactor?.doSomething(request: request)
     }
     
-    func displaySomething(viewModel: ContactsMainList.Something.ViewModel) {
+    func displaySomething(viewModel: UserProfileSummary.Something.ViewModel) {
         //nameTextField.text = viewModel.name
     }
 }

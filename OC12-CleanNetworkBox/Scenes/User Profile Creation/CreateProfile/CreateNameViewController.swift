@@ -47,6 +47,7 @@ final class CreateNameViewController: UIViewController {
         field.font = UIFont(name: "Montserrat", size: 30)
         field.clearButtonMode = .whileEditing
         field.clearsOnBeginEditing = false
+        field.autocorrectionType = .no
         field.tintColor = .systemOrange
         field.translatesAutoresizingMaskIntoConstraints = false
         return field
@@ -100,7 +101,7 @@ final class CreateNameViewController: UIViewController {
     
     // MARK: - Methods
     @objc private func nextButtonTapped() {
-        let enteredName = textField.text ?? ""
+        guard let enteredName = textField.text else { return }
         interactor?.addEnteredName(request: CreateName.AddName.Request(firstName: enteredName))
         routeToCreateCompany()
     }
@@ -144,7 +145,7 @@ extension CreateNameViewController: UITextFieldDelegate {
 extension CreateNameViewController {
     private func setupUI() {
         title = "Nom"
-        view.backgroundColor = UIColor(red: 0.12, green: 0.12, blue: 0.12, alpha: 1.00)
+        view.backgroundColor = .customMainGray
         view.addSubview(indicationLabel)
         view.addSubview(stackView)
         view.addSubview(nextButton)

@@ -55,7 +55,7 @@ final class CreateProfileMailViewController: UIViewController {
     lazy var nextButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("SUIVANT", for: .normal)
-//        button.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
         button.backgroundColor = .white
         button.tintColor = .darkGray
         button.layer.cornerRadius = 10
@@ -105,10 +105,12 @@ final class CreateProfileMailViewController: UIViewController {
     }
     
     // MARK: - Methods
-    @objc func goToCreateCompanyScreen() {
-//        let enteredMailAddress = textField.text ?? ""
-        //interactor?.saveenteredMailAddress(request: .init(firstName: enteredName))
-        //routeToContactsList()
+    @objc func nextButtonTapped() {
+        if let enteredEmail = textField.text {
+            interactor?.addEnteredEmail(request: CreateProfileEmail.Email.Request(email: enteredEmail))
+        }
+        
+        router?.routeToContactsMainList()
     }
     
     // MARK: - Routing
