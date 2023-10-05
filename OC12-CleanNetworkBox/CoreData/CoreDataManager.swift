@@ -16,7 +16,7 @@ final class CoreDataManager {
     let backgroundContext: NSManagedObjectContext
     let mainContext: NSManagedObjectContext
     
-    private init() {
+    init() {
         persistentContainer = NSPersistentContainer(name: "DataModels")
         let description = persistentContainer.persistentStoreDescriptions.first
         description?.type = NSSQLiteStoreType
