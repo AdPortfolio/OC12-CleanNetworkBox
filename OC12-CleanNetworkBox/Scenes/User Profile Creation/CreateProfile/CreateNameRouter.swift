@@ -27,8 +27,8 @@ final class CreateNameRouter: NSObject, CreateNameRoutingLogic, CreateNameDataPa
         guard let viewController = viewController else { return }
         guard var destinationDS = destinationVC.router?.dataStore else { return }
         
-        navigateToCreateCompany(source: viewController, destination: destinationVC)
         passDataToCreateCompany(source: dataStore!, destination: &destinationDS)
+        navigateToCreateCompany(source: viewController, destination: destinationVC)
     }
     
     // MARK: - Navigation
@@ -39,5 +39,5 @@ final class CreateNameRouter: NSObject, CreateNameRoutingLogic, CreateNameDataPa
     // MARK: - Data Passing
     func passDataToCreateCompany(source: CreateNameDataStore, destination: inout CreateCompanyDataStore) {
         destination.profile = source.profile
-    }
+    }  
 }
