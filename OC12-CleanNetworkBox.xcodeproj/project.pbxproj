@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		5920565F2A893C720084E9B0 /* CreateCompanyViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5920565E2A893C720084E9B0 /* CreateCompanyViewControllerTests.swift */; };
+		59392DDE2ACD9C2A0013BC23 /* MePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59392DD82ACD9C2A0013BC23 /* MePresenter.swift */; };
+		59392DDF2ACD9C2A0013BC23 /* MeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59392DD92ACD9C2A0013BC23 /* MeWorker.swift */; };
+		59392DE02ACD9C2A0013BC23 /* MeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59392DDA2ACD9C2A0013BC23 /* MeRouter.swift */; };
+		59392DE12ACD9C2A0013BC23 /* MeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59392DDB2ACD9C2A0013BC23 /* MeModels.swift */; };
+		59392DE22ACD9C2A0013BC23 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59392DDC2ACD9C2A0013BC23 /* MeViewController.swift */; };
+		59392DE32ACD9C2A0013BC23 /* MeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59392DDD2ACD9C2A0013BC23 /* MeInteractor.swift */; };
+		59392DEA2ACD9CDA0013BC23 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59392DE42ACD9CDA0013BC23 /* SettingsPresenter.swift */; };
+		59392DEB2ACD9CDA0013BC23 /* SettingsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59392DE52ACD9CDA0013BC23 /* SettingsWorker.swift */; };
+		59392DEC2ACD9CDA0013BC23 /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59392DE62ACD9CDA0013BC23 /* SettingsRouter.swift */; };
+		59392DED2ACD9CDA0013BC23 /* SettingsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59392DE72ACD9CDA0013BC23 /* SettingsModels.swift */; };
+		59392DEE2ACD9CDA0013BC23 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59392DE82ACD9CDA0013BC23 /* SettingsViewController.swift */; };
+		59392DEF2ACD9CDA0013BC23 /* SettingsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59392DE92ACD9CDA0013BC23 /* SettingsInteractor.swift */; };
 		5945A05D2AAF435F002F7291 /* ContactsMainListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5945A0572AAF435F002F7291 /* ContactsMainListPresenter.swift */; };
 		5945A05E2AAF435F002F7291 /* ContactsMainListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5945A0582AAF435F002F7291 /* ContactsMainListWorker.swift */; };
 		5945A05F2AAF435F002F7291 /* ContactsMainListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5945A0592AAF435F002F7291 /* ContactsMainListRouter.swift */; };
@@ -36,10 +48,24 @@
 		596614312A86D281007FA251 /* CreateNameModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966142B2A86D281007FA251 /* CreateNameModels.swift */; };
 		596614322A86D281007FA251 /* CreateNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966142C2A86D281007FA251 /* CreateNameViewController.swift */; };
 		596614332A86D281007FA251 /* CreateNameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966142D2A86D281007FA251 /* CreateNameInteractor.swift */; };
+		596E1B7B2ABF050B00790F83 /* UIColor+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596E1B7A2ABF050B00790F83 /* UIColor+CustomColors.swift */; };
+		596E1B822ABF120600790F83 /* UserProfileSummaryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596E1B7C2ABF120600790F83 /* UserProfileSummaryPresenter.swift */; };
+		596E1B832ABF120600790F83 /* UserProfileSummaryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596E1B7D2ABF120600790F83 /* UserProfileSummaryWorker.swift */; };
+		596E1B842ABF120600790F83 /* UserProfileSummaryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596E1B7E2ABF120600790F83 /* UserProfileSummaryRouter.swift */; };
+		596E1B852ABF120600790F83 /* UserProfileSummaryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596E1B7F2ABF120600790F83 /* UserProfileSummaryModels.swift */; };
+		596E1B862ABF120600790F83 /* UserProfileSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596E1B802ABF120600790F83 /* UserProfileSummaryViewController.swift */; };
+		596E1B872ABF120600790F83 /* UserProfileSummaryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596E1B812ABF120600790F83 /* UserProfileSummaryInteractor.swift */; };
+		596E1B962ABF385700790F83 /* MainTabBarWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596E1B902ABF385700790F83 /* MainTabBarWorker.swift */; };
+		596E1B972ABF385700790F83 /* MainTabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596E1B912ABF385700790F83 /* MainTabBarRouter.swift */; };
+		596E1B982ABF385700790F83 /* MainTabBarModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596E1B922ABF385700790F83 /* MainTabBarModels.swift */; };
+		596E1B992ABF385700790F83 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596E1B932ABF385700790F83 /* MainTabBarViewController.swift */; };
+		596E1B9A2ABF385700790F83 /* MainTabBarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596E1B942ABF385700790F83 /* MainTabBarInteractor.swift */; };
 		597942EF2A8AB6AA00F7DD93 /* AddProfileImageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597942E92A8AB6AA00F7DD93 /* AddProfileImageRouter.swift */; };
 		597942F02A8AB6AA00F7DD93 /* AddProfileImageModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597942EA2A8AB6AA00F7DD93 /* AddProfileImageModels.swift */; };
 		597942F12A8AB6AA00F7DD93 /* AddProfileImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597942EB2A8AB6AA00F7DD93 /* AddProfileImageViewController.swift */; };
 		597942F22A8AB6AA00F7DD93 /* AddProfileImageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597942EC2A8AB6AA00F7DD93 /* AddProfileImageInteractor.swift */; };
+		5993E53E2ACE95FE00AB5D42 /* CoreDataPersistenceWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5993E53D2ACE95FE00AB5D42 /* CoreDataPersistenceWorker.swift */; };
+		5993E5402ACE9C1F00AB5D42 /* ProContactConverterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5993E53F2ACE9C1F00AB5D42 /* ProContactConverterWorker.swift */; };
 		5995EAE82A8D1E8000575E0D /* CreateProfileMailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995EAE22A8D1E8000575E0D /* CreateProfileMailRouter.swift */; };
 		5995EAE92A8D1E8000575E0D /* CreateProfileMailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995EAE32A8D1E8000575E0D /* CreateProfileMailModels.swift */; };
 		5995EAEA2A8D1E8000575E0D /* CreateProfileMailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995EAE42A8D1E8000575E0D /* CreateProfileMailViewController.swift */; };
@@ -59,6 +85,18 @@
 
 /* Begin PBXFileReference section */
 		5920565E2A893C720084E9B0 /* CreateCompanyViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCompanyViewControllerTests.swift; sourceTree = "<group>"; };
+		59392DD82ACD9C2A0013BC23 /* MePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MePresenter.swift; sourceTree = "<group>"; };
+		59392DD92ACD9C2A0013BC23 /* MeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeWorker.swift; sourceTree = "<group>"; };
+		59392DDA2ACD9C2A0013BC23 /* MeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeRouter.swift; sourceTree = "<group>"; };
+		59392DDB2ACD9C2A0013BC23 /* MeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeModels.swift; sourceTree = "<group>"; };
+		59392DDC2ACD9C2A0013BC23 /* MeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		59392DDD2ACD9C2A0013BC23 /* MeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeInteractor.swift; sourceTree = "<group>"; };
+		59392DE42ACD9CDA0013BC23 /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
+		59392DE52ACD9CDA0013BC23 /* SettingsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsWorker.swift; sourceTree = "<group>"; };
+		59392DE62ACD9CDA0013BC23 /* SettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRouter.swift; sourceTree = "<group>"; };
+		59392DE72ACD9CDA0013BC23 /* SettingsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModels.swift; sourceTree = "<group>"; };
+		59392DE82ACD9CDA0013BC23 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		59392DE92ACD9CDA0013BC23 /* SettingsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInteractor.swift; sourceTree = "<group>"; };
 		5945A0572AAF435F002F7291 /* ContactsMainListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsMainListPresenter.swift; sourceTree = "<group>"; };
 		5945A0582AAF435F002F7291 /* ContactsMainListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsMainListWorker.swift; sourceTree = "<group>"; };
 		5945A0592AAF435F002F7291 /* ContactsMainListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsMainListRouter.swift; sourceTree = "<group>"; };
@@ -91,10 +129,24 @@
 		5966142B2A86D281007FA251 /* CreateNameModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNameModels.swift; sourceTree = "<group>"; };
 		5966142C2A86D281007FA251 /* CreateNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNameViewController.swift; sourceTree = "<group>"; };
 		5966142D2A86D281007FA251 /* CreateNameInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNameInteractor.swift; sourceTree = "<group>"; };
+		596E1B7A2ABF050B00790F83 /* UIColor+CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColors.swift"; sourceTree = "<group>"; };
+		596E1B7C2ABF120600790F83 /* UserProfileSummaryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileSummaryPresenter.swift; sourceTree = "<group>"; };
+		596E1B7D2ABF120600790F83 /* UserProfileSummaryWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileSummaryWorker.swift; sourceTree = "<group>"; };
+		596E1B7E2ABF120600790F83 /* UserProfileSummaryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileSummaryRouter.swift; sourceTree = "<group>"; };
+		596E1B7F2ABF120600790F83 /* UserProfileSummaryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileSummaryModels.swift; sourceTree = "<group>"; };
+		596E1B802ABF120600790F83 /* UserProfileSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileSummaryViewController.swift; sourceTree = "<group>"; };
+		596E1B812ABF120600790F83 /* UserProfileSummaryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileSummaryInteractor.swift; sourceTree = "<group>"; };
+		596E1B902ABF385700790F83 /* MainTabBarWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarWorker.swift; sourceTree = "<group>"; };
+		596E1B912ABF385700790F83 /* MainTabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarRouter.swift; sourceTree = "<group>"; };
+		596E1B922ABF385700790F83 /* MainTabBarModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarModels.swift; sourceTree = "<group>"; };
+		596E1B932ABF385700790F83 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		596E1B942ABF385700790F83 /* MainTabBarInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarInteractor.swift; sourceTree = "<group>"; };
 		597942E92A8AB6AA00F7DD93 /* AddProfileImageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProfileImageRouter.swift; sourceTree = "<group>"; };
 		597942EA2A8AB6AA00F7DD93 /* AddProfileImageModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProfileImageModels.swift; sourceTree = "<group>"; };
 		597942EB2A8AB6AA00F7DD93 /* AddProfileImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProfileImageViewController.swift; sourceTree = "<group>"; };
 		597942EC2A8AB6AA00F7DD93 /* AddProfileImageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProfileImageInteractor.swift; sourceTree = "<group>"; };
+		5993E53D2ACE95FE00AB5D42 /* CoreDataPersistenceWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPersistenceWorker.swift; sourceTree = "<group>"; };
+		5993E53F2ACE9C1F00AB5D42 /* ProContactConverterWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProContactConverterWorker.swift; sourceTree = "<group>"; };
 		5995EAE22A8D1E8000575E0D /* CreateProfileMailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileMailRouter.swift; sourceTree = "<group>"; };
 		5995EAE32A8D1E8000575E0D /* CreateProfileMailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileMailModels.swift; sourceTree = "<group>"; };
 		5995EAE42A8D1E8000575E0D /* CreateProfileMailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileMailViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +178,32 @@
 				5920565E2A893C720084E9B0 /* CreateCompanyViewControllerTests.swift */,
 			);
 			path = CreateCompany;
+			sourceTree = "<group>";
+		};
+		59392DD42ACD9B3A0013BC23 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				59392DE82ACD9CDA0013BC23 /* SettingsViewController.swift */,
+				59392DE92ACD9CDA0013BC23 /* SettingsInteractor.swift */,
+				59392DE42ACD9CDA0013BC23 /* SettingsPresenter.swift */,
+				59392DE62ACD9CDA0013BC23 /* SettingsRouter.swift */,
+				59392DE52ACD9CDA0013BC23 /* SettingsWorker.swift */,
+				59392DE72ACD9CDA0013BC23 /* SettingsModels.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		59392DD72ACD9C100013BC23 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				59392DDC2ACD9C2A0013BC23 /* MeViewController.swift */,
+				59392DDD2ACD9C2A0013BC23 /* MeInteractor.swift */,
+				59392DD82ACD9C2A0013BC23 /* MePresenter.swift */,
+				59392DDA2ACD9C2A0013BC23 /* MeRouter.swift */,
+				59392DD92ACD9C2A0013BC23 /* MeWorker.swift */,
+				59392DDB2ACD9C2A0013BC23 /* MeModels.swift */,
+			);
+			path = Me;
 			sourceTree = "<group>";
 		};
 		5945A0562AAF3E08002F7291 /* MainContactsList */ = {
@@ -198,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				596613F52A86CE27007FA251 /* AppDelegate.swift */,
+				5993E53C2ACE95D900AB5D42 /* Workers */,
 				594B68142AB20324000E05BA /* Models */,
 				596614262A86CF6D007FA251 /* Scenes */,
 				59B64B4A2AA0C47B009C0BB8 /* Extensions */,
@@ -221,11 +300,8 @@
 		596614262A86CF6D007FA251 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				596614272A86CF92007FA251 /* CreateProfile */,
-				5958F6782A871A6200CB9B17 /* CreateCompany */,
-				597942E62A8AB5A000F7DD93 /* AddProfileImage */,
-				5995EADF2A8D1E4500575E0D /* CreateProfileEmail */,
-				5945A0562AAF3E08002F7291 /* MainContactsList */,
+				596E1B742ABEFE0900790F83 /* User Profile Creation */,
+				596E1B752ABEFE3900790F83 /* Main App */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -258,6 +334,46 @@
 			path = CreateName;
 			sourceTree = "<group>";
 		};
+		596E1B742ABEFE0900790F83 /* User Profile Creation */ = {
+			isa = PBXGroup;
+			children = (
+				596614272A86CF92007FA251 /* CreateProfile */,
+				5958F6782A871A6200CB9B17 /* CreateCompany */,
+				597942E62A8AB5A000F7DD93 /* AddProfileImage */,
+				5995EADF2A8D1E4500575E0D /* CreateProfileEmail */,
+			);
+			path = "User Profile Creation";
+			sourceTree = "<group>";
+		};
+		596E1B752ABEFE3900790F83 /* Main App */ = {
+			isa = PBXGroup;
+			children = (
+				596E1B932ABF385700790F83 /* MainTabBarViewController.swift */,
+				596E1B942ABF385700790F83 /* MainTabBarInteractor.swift */,
+				596E1B912ABF385700790F83 /* MainTabBarRouter.swift */,
+				596E1B902ABF385700790F83 /* MainTabBarWorker.swift */,
+				596E1B922ABF385700790F83 /* MainTabBarModels.swift */,
+				596E1B882ABF121700790F83 /* UserProfileSummary */,
+				5945A0562AAF3E08002F7291 /* MainContactsList */,
+				59392DD42ACD9B3A0013BC23 /* Settings */,
+				59392DD72ACD9C100013BC23 /* Me */,
+			);
+			path = "Main App";
+			sourceTree = "<group>";
+		};
+		596E1B882ABF121700790F83 /* UserProfileSummary */ = {
+			isa = PBXGroup;
+			children = (
+				596E1B802ABF120600790F83 /* UserProfileSummaryViewController.swift */,
+				596E1B812ABF120600790F83 /* UserProfileSummaryInteractor.swift */,
+				596E1B7C2ABF120600790F83 /* UserProfileSummaryPresenter.swift */,
+				596E1B7E2ABF120600790F83 /* UserProfileSummaryRouter.swift */,
+				596E1B7D2ABF120600790F83 /* UserProfileSummaryWorker.swift */,
+				596E1B7F2ABF120600790F83 /* UserProfileSummaryModels.swift */,
+			);
+			path = UserProfileSummary;
+			sourceTree = "<group>";
+		};
 		597942E62A8AB5A000F7DD93 /* AddProfileImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +383,15 @@
 				597942EA2A8AB6AA00F7DD93 /* AddProfileImageModels.swift */,
 			);
 			path = AddProfileImage;
+			sourceTree = "<group>";
+		};
+		5993E53C2ACE95D900AB5D42 /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				5993E53D2ACE95FE00AB5D42 /* CoreDataPersistenceWorker.swift */,
+				5993E53F2ACE9C1F00AB5D42 /* ProContactConverterWorker.swift */,
+			);
+			path = Workers;
 			sourceTree = "<group>";
 		};
 		5995EADF2A8D1E4500575E0D /* CreateProfileEmail */ = {
@@ -284,6 +409,7 @@
 			isa = PBXGroup;
 			children = (
 				59B64B4B2AA0C535009C0BB8 /* UIButton+State.swift */,
+				596E1B7A2ABF050B00790F83 /* UIColor+CustomColors.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -334,7 +460,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					596613F12A86CE27007FA251 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -389,38 +515,64 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59392DE22ACD9C2A0013BC23 /* MeViewController.swift in Sources */,
 				596614332A86D281007FA251 /* CreateNameInteractor.swift in Sources */,
 				5945A0622AAF435F002F7291 /* ContactsMainListInteractor.swift in Sources */,
+				59392DEC2ACD9CDA0013BC23 /* SettingsRouter.swift in Sources */,
 				596614312A86D281007FA251 /* CreateNameModels.swift in Sources */,
+				596E1B832ABF120600790F83 /* UserProfileSummaryWorker.swift in Sources */,
 				5958F6822A871A9E00CB9B17 /* CreateCompanyModels.swift in Sources */,
 				596613F62A86CE27007FA251 /* AppDelegate.swift in Sources */,
+				59392DEF2ACD9CDA0013BC23 /* SettingsInteractor.swift in Sources */,
+				59392DEA2ACD9CDA0013BC23 /* SettingsPresenter.swift in Sources */,
+				596E1B972ABF385700790F83 /* MainTabBarRouter.swift in Sources */,
 				597942EF2A8AB6AA00F7DD93 /* AddProfileImageRouter.swift in Sources */,
+				59392DDE2ACD9C2A0013BC23 /* MePresenter.swift in Sources */,
+				596E1B992ABF385700790F83 /* MainTabBarViewController.swift in Sources */,
+				596E1B982ABF385700790F83 /* MainTabBarModels.swift in Sources */,
+				59392DEB2ACD9CDA0013BC23 /* SettingsWorker.swift in Sources */,
 				5958F6812A871A9E00CB9B17 /* CreateCompanyRouter.swift in Sources */,
 				5958F6832A871A9E00CB9B17 /* CreateCompanyViewController.swift in Sources */,
+				596E1B852ABF120600790F83 /* UserProfileSummaryModels.swift in Sources */,
+				596E1B962ABF385700790F83 /* MainTabBarWorker.swift in Sources */,
+				59392DED2ACD9CDA0013BC23 /* SettingsModels.swift in Sources */,
 				5945A0652AAFB2E1002F7291 /* DataModels.xcdatamodeld in Sources */,
 				5995EAEB2A8D1E8000575E0D /* CreateProfileMailInteractor.swift in Sources */,
 				5995EAE82A8D1E8000575E0D /* CreateProfileMailRouter.swift in Sources */,
+				59392DEE2ACD9CDA0013BC23 /* SettingsViewController.swift in Sources */,
+				596E1B862ABF120600790F83 /* UserProfileSummaryViewController.swift in Sources */,
 				5945A05E2AAF435F002F7291 /* ContactsMainListWorker.swift in Sources */,
+				59392DDF2ACD9C2A0013BC23 /* MeWorker.swift in Sources */,
 				5953655E2AB0A16000137D57 /* ProContactMO+CoreDataProperties.swift in Sources */,
+				59392DE12ACD9C2A0013BC23 /* MeModels.swift in Sources */,
 				59B64B4C2AA0C535009C0BB8 /* UIButton+State.swift in Sources */,
 				5995EAE92A8D1E8000575E0D /* CreateProfileMailModels.swift in Sources */,
 				5953655D2AB0A16000137D57 /* ProContactMO+CoreDataClass.swift in Sources */,
 				5945A05D2AAF435F002F7291 /* ContactsMainListPresenter.swift in Sources */,
 				594B68182AB20338000E05BA /* Address.swift in Sources */,
 				596614302A86D281007FA251 /* CreateNameRouter.swift in Sources */,
+				596E1B9A2ABF385700790F83 /* MainTabBarInteractor.swift in Sources */,
 				597942F12A8AB6AA00F7DD93 /* AddProfileImageViewController.swift in Sources */,
 				597942F22A8AB6AA00F7DD93 /* AddProfileImageInteractor.swift in Sources */,
 				5995EAEA2A8D1E8000575E0D /* CreateProfileMailViewController.swift in Sources */,
 				5945A05F2AAF435F002F7291 /* ContactsMainListRouter.swift in Sources */,
 				5953655C2AB0A16000137D57 /* AddressMO+CoreDataProperties.swift in Sources */,
 				596614322A86D281007FA251 /* CreateNameViewController.swift in Sources */,
+				59392DE32ACD9C2A0013BC23 /* MeInteractor.swift in Sources */,
 				5945A0602AAF435F002F7291 /* ContactsMainListModels.swift in Sources */,
 				597942F02A8AB6AA00F7DD93 /* AddProfileImageModels.swift in Sources */,
 				5945A0612AAF435F002F7291 /* ContactsMainListViewController.swift in Sources */,
+				59392DE02ACD9C2A0013BC23 /* MeRouter.swift in Sources */,
+				596E1B872ABF120600790F83 /* UserProfileSummaryInteractor.swift in Sources */,
 				595365562AB0926A00137D57 /* CoreDataManager.swift in Sources */,
 				5953655B2AB0A16000137D57 /* AddressMO+CoreDataClass.swift in Sources */,
+				596E1B7B2ABF050B00790F83 /* UIColor+CustomColors.swift in Sources */,
 				594B68162AB20331000E05BA /* ProContact.swift in Sources */,
 				595365602AB0A3DE00137D57 /* ProContactManager.swift in Sources */,
+				5993E5402ACE9C1F00AB5D42 /* ProContactConverterWorker.swift in Sources */,
+				596E1B822ABF120600790F83 /* UserProfileSummaryPresenter.swift in Sources */,
+				596E1B842ABF120600790F83 /* UserProfileSummaryRouter.swift in Sources */,
+				5993E53E2ACE95FE00AB5D42 /* CoreDataPersistenceWorker.swift in Sources */,
 				5958F6842A871A9E00CB9B17 /* CreateCompanyInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,6 +644,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -552,6 +705,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
